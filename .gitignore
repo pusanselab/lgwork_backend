@@ -3,6 +3,4 @@ node_modules/
 target/
 generated/
 out/
-ROOT.iml
-db.sqlite
-config.spec.js
+lgwork_backend.iml
