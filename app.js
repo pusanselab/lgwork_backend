@@ -3,9 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+const db = require('./model/db')
+let appRoot = path.resolve(__dirname)
+const global = require('./helpers/global.helper')
 
 var app = express();
 
@@ -38,4 +41,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// global(db, app, appRoot, express)
+global(app, appRoot, express)
 module.exports = app;
