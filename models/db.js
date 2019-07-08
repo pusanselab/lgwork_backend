@@ -30,6 +30,9 @@ const db = {
     Header: require('./header.model')(Sequelize, sequelize),
     Idu: require('./idu.model')(Sequelize, sequelize),
     Odu: require('./odu.model')(Sequelize, sequelize),
+    Hru: require('./hru.model')(Sequelize, sequelize),
+    Calolimeter: require('./calolimeter.model')(Sequelize, sequelize),
+    SiduWhu: require('./sidu_whu.model')(Sequelize, sequelize),
 }
 
 
@@ -40,6 +43,19 @@ db.Odu.belongsTo(db.Header, {foreignKey: 'headerUid', constraints: false, target
 // IDU
 db.Header.hasMany(db.Idu, {foreignKey: 'headerUid', constraints: false, sourceKey: 'headerUid'})
 db.Idu.belongsTo(db.Header, {foreignKey: 'headerUid', constraints: false, targetKey: 'headerUid'})
+
+// Calolimeter
+db.Header.hasMany(db.Calolimeter, {foreignKey: 'headerUid', constraints: false, sourceKey: 'headerUid'})
+db.Calolimeter.belongsTo(db.Header, {foreignKey: 'headerUid', constraints: false, targetKey: 'headerUid'})
+
+// Hru
+db.Header.hasMany(db.Hru, {foreignKey: 'headerUid', constraints: false, sourceKey: 'headerUid'})
+db.Hru.belongsTo(db.Header, {foreignKey: 'headerUid', constraints: false, targetKey: 'headerUid'})
+
+// Sidu_whu
+db.Header.hasMany(db.SiduWhu, {foreignKey: 'headerUid', constraints: false, sourceKey: 'headerUid'})
+db.SiduWhu.belongsTo(db.Header, {foreignKey: 'headerUid', constraints: false, targetKey: 'headerUid'})
+
 
 
 
