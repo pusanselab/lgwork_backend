@@ -1,11 +1,11 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('odu', {
-            oduUid: {
+    return sequelize.define('Odu', {
+            odu_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            headerUid: {
+            header_uid: {
                 type: Sequelize.INTEGER
             },
             TXT_HIGH_PRESSURE_TARGETTING: {

@@ -1,11 +1,11 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('hru', {
-            hruUid: {
+    return sequelize.define('Hru', {
+            hru_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            headerUid: {
+            header_uid: {
                 type: Sequelize.INTEGER
             },
             TXT_HRU_NUMBER: {

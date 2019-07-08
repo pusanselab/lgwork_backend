@@ -1,11 +1,11 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('calolimeter', {
-            calolimeterUid: {
+    return sequelize.define('Calolimeter', {
+            calolimeter_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            headerUid: {
+            header_uid: {
                 type: Sequelize.INTEGER
             },
             Capacity: {

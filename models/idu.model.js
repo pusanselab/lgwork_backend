@@ -1,11 +1,11 @@
 module.exports = (Sequelize, sequelize) => {
     return sequelize.define('Idu', {
-            iduUid: {
+            idu_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            headerUid: {
+            header_uid: {
                 type: Sequelize.INTEGER
             },
             TXT_IDU_CAPACITY: {

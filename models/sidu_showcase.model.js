@@ -1,6 +1,6 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('Sidu_whu', {
-            sidu_whu_uid: {
+    return sequelize.define('Sidu_showcase', {
+            sidu_showcase_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
@@ -11,50 +11,50 @@ module.exports = (Sequelize, sequelize) => {
             TXT_SIDU_NUMBER: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_TEMP_CHOICE: {
+            TXT_SIDU_SHOWCASE_TYPE: {
+                type: Sequelize.STRING,
+            },
+            TXT_SIDU_SHOWCASE_OPER_STATE: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_AIR_OUT_TEMP_TARGETTING: {
-                type: Sequelize.DOUBLE,
-            },
-            TXT_SIDU_HEAT_WATER_ACTIVE: {
+            TXT_SIDU_SHOWCASE_OPER_DEFROST: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_HEAT_WATER_TEMP_TARGETTING: {
-                type: Sequelize.DOUBLE,
-            },
-            TXT_SIDU_WATER_PUMP: {
+            TXT_SIDU_SHOWCASE_OPER_REFRIGERATION: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_HEATER_WATER_MODE: {
+            TXT_SIDU_SHOWCASE_TROUBLE_DEFROSTING: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_HEAT_WATER_TEMP: {
+            TXT_IDU_CENTRAL_CONTROL_ADDRESS: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_WATER_IN_TEMP: {
+            TXT_AIR_TEMP: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_WATER_OUT_TEMP: {
+            TXT_SIDU_SHOWCASE_DEFROST_TEMP: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_TEMP_GAP_TGT: {
+            TXT_IDU_PIPE_IN_TEMP: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_TEMP_GAP: {
+            TXT_IDU_PIPE_OUT_TEMP: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_HEATER: {
+            TXT_SIDU_CASECADE_EEV: {
+                type: Sequelize.DOUBLE,
+            },
+            TXT_SIDU_CASECADE_ERROR: {
                 type: Sequelize.INTEGER,
             },
-            TXT_SIDU_HEATER_OUT_TEMP: {
+            TXT_SIDU_SHOWCASE_TARGET_TEMP: {
                 type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_RELAY1: {
-                type: Sequelize.INTEGER,
+            TXT_SIDU_SHOWCASE_THERMO_GAP_TEMP: {
+                type: Sequelize.DOUBLE,
             },
-            TXT_SIDU_RELAY2: {
-                type: Sequelize.INTEGER,
+            TXT_SH_TARGETTING: {
+                type: Sequelize.DOUBLE,
             }
 
         }, {
