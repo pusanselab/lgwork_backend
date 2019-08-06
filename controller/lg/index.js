@@ -17,5 +17,6 @@ const router = express.Router()
  *         description: success
  */
 router.get('/', ctrl.test)    // 테스트용
+router.post('/login', ctrl.login)    // 테스트용
 
 module.exports = router
