@@ -7,8 +7,8 @@ const test = (req, res) => {
 }
 
 const login = (req, res) => {
-    const Id = req.body.userId;
-    const Pwd = req.body.userPwd;
+    const Id = req.body.user_id;
+    const Pwd = req.body.user_pwd;
 
     // console.log(req.body.userId)
     // console.log(req.body.userPwd)
@@ -41,7 +41,9 @@ const data_search_id = (req, res) => {
             header_uid: uid
         }
     }).then( header => {
-        return res.json(header)
+        result.content = json(header)
+        result.message = "success"
+        return res.result
     })
 }
 
