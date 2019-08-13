@@ -19,5 +19,6 @@ const router = express.Router()
 router.get('/', ctrl.test)    // 테스트용
 router.post('/login', ctrl.login)    // 테스트용
 router.post('/data_search_id', ctrl.data_search_id)    // 테스트용
+router.post('/data_search', ctrl.data_search)    // 테스트용
 
 module.exports = router
