@@ -34,16 +34,13 @@ const login = (req, res) => {
 const data_search_id = (req, res) => {
     const uid = req.body.header_uid;
 
-    console.log(req.body)
     const result = {};
     db.Header.findOne({
         where : {
             header_uid: uid
         }
     }).then( header => {
-        result.content = json(header)
-        result.message = "success"
-        return res.result
+        return res.json(header)
     })
 }
 
