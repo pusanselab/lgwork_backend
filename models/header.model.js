@@ -5,6 +5,10 @@ module.exports = (Sequelize, sequelize) => {
                 primaryKey: true,
                 autoIncrement: true
             },
+            lgmv_date: {
+            type: Sequelize.STRING,
+            nullable: false
+        },
             lgmv_model_name: {
                 type: Sequelize.STRING,
                 nullable: false
@@ -66,7 +70,7 @@ module.exports = (Sequelize, sequelize) => {
             plm_step1: {
                 type: Sequelize.STRING
             },
-            plm_stetp2: {
+            plm_step2: {
                 type: Sequelize.STRING
             },
             test_step1: {
@@ -89,6 +93,9 @@ module.exports = (Sequelize, sequelize) => {
             },
             conn_memo: {
                 type: Sequelize.STRING
+            },
+            conn_operation_rate: {
+                type: Sequelize.INTEGER
             },
             lgmv_odu_count: {
                 type: Sequelize.INTEGER
@@ -129,6 +136,10 @@ module.exports = (Sequelize, sequelize) => {
             lgmv_unit_flux: {
                 type: Sequelize.STRING
             },
+            summary_graph_id: {
+                type: Sequelize.STRING
+            },
+
 
 
         }, {
