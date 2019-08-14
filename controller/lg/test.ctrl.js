@@ -68,14 +68,31 @@ const data_search = (req, res) => {
 
     console.log(req.body)
 
+
     const result = {};
 
-    // db.Header.findAll({
-    //     where : {
-    //     }
-    // }).then( header => {
-    // })
-    res.send("success")
+    db.Header.findAll({
+        where : {
+            lgmv_model_filter1: model_filter1,
+            lgmv_model_filter2: model_filter2,
+            // lgmv_model_name: model_name,
+            // conn_tester: tester,
+            // calorimeter_cap: calorimeter_cap,
+            // test_step1: test_step1
+        }
+    }).then( header => {
+        console.log(header, "abc")
+        if(header == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            result.content = header
+            result.code = 200
+            result.message = "success"
+            return res.json(result)
+        }
+    })
 }
 
 module.exports = {test, login, data_search, data_search_id}
