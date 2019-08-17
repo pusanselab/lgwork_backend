@@ -8,6 +8,9 @@ module.exports = (Sequelize, sequelize) => {
             header_uid: {
                 type: Sequelize.INTEGER
             },
+            TXT_TIME: {
+                type: Sequelize.STRING
+            },
             Capacity: {
                 type: Sequelize.INTEGER,
             },
