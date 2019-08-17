@@ -317,8 +317,14 @@ const data_search = (req, res) => {
         lgmv_model_filter1: lgmv_model_filter1,
         lgmv_model_filter2: lgmv_model_filter2
     }
+    function execption_checker(input){
+        if(input == null && input == undefined){ console.log("execption")}
+        else{ console.log(input) }
+    }
 
-    if(lgmv_model_name != ""){ query.lgmv_model_name = lgmv_model_name }
+    execption_checker(lgmv_model_name)
+
+    if(lgmv_model_name != undefined || lgmv_model_name!= ""){ query.lgmv_model_name = lgmv_model_name }
     if(conn_tester != ""){ query.conn_tester = conn_tester }
     if(data_id != ""){ query.data_id = data_id }
     if(calorimeter_cap != ""){ query.calorimeter_cap = calorimeter_cap }
@@ -394,8 +400,8 @@ const data_search_detail = (req, res) => {
        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
     }).then( calorimeter => {
         if(calorimeter.length == 0 ){
-            result.calorimeter.code = 400
-            result.calorimeter.message = "failure"
+            result.cooling_performance.code = 400
+            result.cooling_performance.message = "failure"
             return res.json(result)
         }else{
             const index = calorimeter[0].dataValues.TXT_TIME;
