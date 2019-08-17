@@ -60,7 +60,10 @@ const login = (req, res) => {
 
 const overview = (req, res) => {
     const result = {
-        content : []
+        content : {
+            model : [],
+            test : []
+        }
     };
 
     db.Header.findOne({
@@ -72,7 +75,7 @@ const overview = (req, res) => {
         ],
     }).then( counter => {
         console.log(counter.dataValues)
-        result.content[0] = counter.dataValues
+        result.content.model[0] = counter.dataValues
 
         db.Header.findOne({
             where: {
@@ -82,7 +85,7 @@ const overview = (req, res) => {
                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi V H/R']
             ],
         }).then( counter => {
-            result.content[1] = counter.dataValues
+            result.content.model[1] = counter.dataValues
 
             db.Header.findOne({
                 where: {
@@ -92,7 +95,7 @@ const overview = (req, res) => {
                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi V ARUM']
                 ],
             }).then( counter => {
-                result.content[2] = counter.dataValues
+                result.content.model[2] = counter.dataValues
 
                 db.Header.findOne({
                     where: {
@@ -102,7 +105,7 @@ const overview = (req, res) => {
                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi Water']
                     ],
                 }).then( counter => {
-                    result.content[3] = counter.dataValues
+                    result.content.model[3] = counter.dataValues
 
                     db.Header.findOne({
                         where: {
@@ -112,7 +115,7 @@ const overview = (req, res) => {
                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi V S']
                         ],
                     }).then( counter => {
-                        result.content[4] = counter.dataValues
+                        result.content.model[4] = counter.dataValues
 
                         db.Header.findOne({
                             where: {
@@ -122,7 +125,7 @@ const overview = (req, res) => {
                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi V M']
                             ],
                         }).then( counter => {
-                            result.content[5] = counter.dataValues
+                            result.content.model[5] = counter.dataValues
 
                             db.Header.findOne({
                                 where: {
@@ -132,7 +135,7 @@ const overview = (req, res) => {
                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Multi V Space']
                                 ],
                             }).then( counter => {
-                                result.content[6] = counter.dataValues
+                                result.content.model[6] = counter.dataValues
 
                                 db.Header.findOne({
                                     where: {
@@ -142,7 +145,7 @@ const overview = (req, res) => {
                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'GHP']
                                     ],
                                 }).then( counter => {
-                                    result.content[7] = counter.dataValues
+                                    result.content.model[7] = counter.dataValues
 
                                     db.Header.findOne({
                                         where: {
@@ -152,7 +155,7 @@ const overview = (req, res) => {
                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Chiller']
                                         ],
                                     }).then( counter => {
-                                        result.content[8] = counter.dataValues
+                                        result.content.model[8] = counter.dataValues
 
                                         db.Header.findOne({
                                             where: {
@@ -162,7 +165,7 @@ const overview = (req, res) => {
                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Therma V']
                                             ],
                                         }).then( counter => {
-                                            result.content[9] = counter.dataValues
+                                            result.content.model[9] = counter.dataValues
 
                                             db.Header.findOne({
                                                 where: {
@@ -172,7 +175,7 @@ const overview = (req, res) => {
                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Single Package']
                                                 ],
                                             }).then( counter => {
-                                                result.content[10] = counter.dataValues
+                                                result.content.model[10] = counter.dataValues
 
                                                 db.Header.findOne({
                                                     where: {
@@ -182,7 +185,7 @@ const overview = (req, res) => {
                                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Single&Multi']
                                                     ],
                                                 }).then( counter => {
-                                                    result.content[11] = counter.dataValues
+                                                    result.content.model[11] = counter.dataValues
 
                                                     db.Header.findOne({
                                                         where: {
@@ -192,7 +195,7 @@ const overview = (req, res) => {
                                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'Refrigeration']
                                                         ],
                                                     }).then( counter => {
-                                                        result.content[12] = counter.dataValues
+                                                        result.content.model[12] = counter.dataValues
 
                                                         db.Header.findOne({
                                                             where: {
@@ -202,7 +205,7 @@ const overview = (req, res) => {
                                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '성능']
                                                             ],
                                                         }).then( counter => {
-                                                            result.content[13] = counter.dataValues
+                                                            result.content.test[0] = counter.dataValues
 
                                                             db.Header.findOne({
                                                                 where: {
@@ -212,7 +215,7 @@ const overview = (req, res) => {
                                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '냉방성능']
                                                                 ],
                                                             }).then( counter => {
-                                                                result.content[14] = counter.dataValues
+                                                                result.content.test[1] = counter.dataValues
 
                                                                 db.Header.findOne({
                                                                     where: {
@@ -222,7 +225,7 @@ const overview = (req, res) => {
                                                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '난방성능']
                                                                     ],
                                                                 }).then( counter => {
-                                                                    result.content[15] = counter.dataValues
+                                                                    result.content.test[2] = counter.dataValues
 
                                                                     db.Header.findOne({
                                                                         where: {
@@ -232,7 +235,7 @@ const overview = (req, res) => {
                                                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '안전성']
                                                                         ],
                                                                     }).then( counter => {
-                                                                        result.content[16] = counter.dataValues
+                                                                        result.content.test[3] = counter.dataValues
 
                                                                         db.Header.findOne({
                                                                             where: {
@@ -242,7 +245,7 @@ const overview = (req, res) => {
                                                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '신뢰성']
                                                                             ],
                                                                         }).then( counter => {
-                                                                            result.content[17] = counter.dataValues
+                                                                            result.content.test[4] = counter.dataValues
 
                                                                             db.Header.findOne({
                                                                                 where: {
@@ -252,7 +255,7 @@ const overview = (req, res) => {
                                                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), '기타']
                                                                                 ],
                                                                             }).then( counter => {
-                                                                                result.content[18] = counter.dataValues
+                                                                                result.content.test[5] = counter.dataValues
 
                                                                                 return res.json(result)
                                                                             })
@@ -301,15 +304,19 @@ const data_search_id = (req, res) => {
 }
 
 const data_search = (req, res) => {
-    const model_filter1 = req.body.lgmv_model_filter1;
-    const model_filter2 = req.body.lgmv_model_filter2;
-    const model_name = req.body.lgmv_model_name;
-    const tester = req.body.conn_tester;
-    const data_id = req.body.data_id;
-    const calorimeter_cap = req.body.calorimeter_cap;
-    const test_step1 = req.body.test_step1;
+    const model_filter1 = req.body.lgmv_model_filter1
+    const model_filter2 = req.body.lgmv_model_filter2
+    const model_name = req.body.lgmv_model_name
+    const tester = req.body.conn_tester
+    const data_id = req.body.data_id
+    const calorimeter_cap = req.body.calorimeter_cap
+    const test_step1 = req.body.test_step1
 
-    const result = {};
+    const result = {}
+    const query = {}
+
+
+
 
     db.Header.findAll({
         where : {
@@ -352,8 +359,8 @@ const data_search_detail = (req, res) => {
             calorimeter : {},
             header : {}
         },
-        code : {},
-        message : {}
+        header :{},
+        calorimeter : {}
     };
 
     db.Header.findAll({
@@ -370,12 +377,12 @@ const data_search_detail = (req, res) => {
     }).then( header => {
         console.log("header 값 : ", header)
         if(header.length == 0 ){
-            result.code = 400
-            result.message = "failure"
+            result.header.code = 400
+            result.header.message = "failure"
         }else{
             result.content.header = header
-            result.code = 200
-            result.message = "success"
+            result.header.code = 200
+            result.header.message = "success"
         }
     }).then( db.Calolimeter.findAll({
         where : {
@@ -388,13 +395,13 @@ const data_search_detail = (req, res) => {
     }).then( calorimeter => {
         console.log("반환 값 : ", calorimeter)
         if(calorimeter.length == 0 ){
-            result.code = 400
-            result.message = "failure"
+            result.calorimeter.code = 400
+            result.calorimeter.message = "failure"
             return res.json(result)
         }else{
             result.content.calorimeter = calorimeter[0]
-            result.code = 200
-            result.message = "success"
+            result.calorimeter.code = 200
+            result.calorimeter.message = "success"
             return res.json(result)
         }
     }))
