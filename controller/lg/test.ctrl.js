@@ -313,25 +313,23 @@ const data_search = (req, res) => {
     const test_step1 = req.body.test_step1
 
     const result = {}
-    const query = {}
+    const query = {
+        lgmv_model_filter1: lgmv_model_filter1,
+        lgmv_model_filter2: lgmv_model_filter2
+    }
 
-    {query.lgmv_model_filter1 = lgmv_model_filter1}
+    if(lgmv_model_name != ""){ query.lgmv_model_name = lgmv_model_name }
+    if(conn_tester != ""){ query.conn_tester = conn_tester }
+    if(data_id != ""){ query.data_id = data_id }
+    if(calorimeter_cap != ""){ query.calorimeter_cap = calorimeter_cap }
+    if(test_step1 != ""){ query.test_step1 = test_step1 }
 
-
-
+    console.log("쿼리다", query)
 
     db.Header.findAll({
-        where : {
-            lgmv_model_filter1: model_filter1,
-            lgmv_model_filter2: model_filter2,
-            // lgmv_model_name: model_name,
-            // conn_tester: tester,
-            // calorimeter_cap: calorimeter_cap,
-            // test_step1: test_step1
-        }
+        where : query
     }).then( header => {
-        console.log(header, "abc")
-        if(header == null){
+        if(header.length == 0){
             result.code = 400
             result.message = "failure"
             return res.json(result)
