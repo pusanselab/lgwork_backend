@@ -28,6 +28,108 @@ const test = (req, res) => {
     })
 }
 
+const redundancy_check = (req, res) => {
+    const lgmv_serial_number = req.body.lgmv_serial_number;
+    const calorimeter_id_wb = req.body.calorimeter_id_wb;
+    const calorimeter_id_db = req.body.calorimeter_id_db;
+    const calorimeter_od_wb = req.body.calorimeter_od_wb;
+    const calorimeter_od_db = req.body.calorimeter_od_db;
+    const conn_operation_rate = req.body.conn_operation_rate;
+    const conn_testroom_number = req.body.conn_testroom_number;
+    const test_step2 = req.body.test_step2;
+
+    const header_uid = req.body.header_uid;
+
+    const result = {
+        content : {
+            cooling_performance : {},
+            header : {}
+        },
+        header :{},
+        cooling_performance : {}
+    };
+
+    db.Header.findAll({
+        where : {
+            lgmv_serial_number: lgmv_serial_number,
+            calorimeter_id_wb: calorimeter_id_wb,
+            calorimeter_id_db: calorimeter_id_db,
+            calorimeter_od_wb: calorimeter_od_wb,
+            calorimeter_od_db: calorimeter_od_db,
+            conn_operation_rate: conn_operation_rate,
+            conn_testroom_number: conn_testroom_number,
+            test_step2: test_step2
+        }
+    }).then( header => {
+        console.log("header 값 : ", header)
+        if(header.length == 0 ){
+            result.header.code = 400
+            result.header.message = "failure"
+        }else{
+            result.content.header = header
+            result.header.code = 200
+            result.header.message = "success"
+        }
+    }).then( db.Calolimeter.findAll({
+        where : {
+            header_uid: header_uid
+        },
+        order:[
+            ['EER', 'DESC']
+        ]
+        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
+    }).then( calorimeter => {
+        if(calorimeter.length == 0 ){
+            result.cooling_performance.code = 400
+            result.cooling_performance.message = "failure"
+            return res.json(result)
+        }else{
+            const index = calorimeter[0].dataValues.TXT_TIME;
+            const EER = calorimeter[0].dataValues.EER
+
+            result.content.cooling_performance.EER = EER
+
+            db.Odu.findOne({
+                where : {
+                    header_uid : header_uid,
+                    TXT_TIME : index
+                },
+                attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
+            }).then( odu => {
+                const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
+                const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
+                const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
+                const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
+                const main_eev = odu.TXT_MAIN_EEV
+                const sub_eev = odu.TXT_SUB_EEV
+
+                result.content.cooling_performance.compressor_1 = compressor_1
+                result.content.cooling_performance.compressor_2 = compressor_2
+                result.content.cooling_performance.odu_fan_rpm1 = odu_fan_rpm1
+                result.content.cooling_performance.odu_fan_rpm2 = odu_fan_rpm2
+                result.content.cooling_performance.main_eev = main_eev
+                result.content.cooling_performance.sub_eev = sub_eev
+
+                db.Idu.findOne({
+                    where : {
+                        header_uid : header_uid,
+                        TXT_TIME : index
+                    },
+                    attributes : ["TXT_IDU_WIND"]
+                }).then( idu => {
+                    const idu1_fan_rpm = idu.TXT_IDU_WIND
+
+                    result.content.cooling_performance.idu1_fan_rpm = idu1_fan_rpm
+                    result.cooling_performance.code = 200
+                    result.cooling_performance.message = "success"
+                    return res.json(result)
+
+                })
+            })
+        }
+    }))
+}
+
 const login = (req, res) => {
     const Id = req.body.user_id;
     const Pwd = req.body.user_pwd;
@@ -484,4 +586,4 @@ const data_search_detail = (req, res) => {
     }))
 }
 
-module.exports = {test, login, overview,  data_search, data_search_id, data_search_detail}
+module.exports = {test, redundancy_check, login, overview,  data_search, data_search_id, data_search_detail, }
