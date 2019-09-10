@@ -609,4 +609,65 @@ const data_search_detail = (req, res) => {
     }))
 }
 
-module.exports = {test, redundancy_check, login, overview,  data_search, data_search_id, data_search_detail, }
+const graph_odu = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Odu.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [column_name, "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_idu = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Idu.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [column_name, "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+module.exports = {
+    test, redundancy_check, login, overview,  data_search, data_search_id, data_search_detail,
+    graph_odu, graph_idu
+}
