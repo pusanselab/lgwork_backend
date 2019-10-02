@@ -1,2 +1,2 @@
 // admin
-app.use('/api/test', require('../controller/test'))
+app.use('/api', require('../controller/lg'))
