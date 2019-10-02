@@ -1,15 +1,18 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('Calolimeter', {
-            calolimeter_uid: {
+    return sequelize.define('Calorimeter', {
+            calorimeter_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
+            TXT_TIME: {
+                type: Sequelize.STRING,
+            },
             header_uid: {
                 type: Sequelize.INTEGER
             },
-            TXT_TIME: {
-                type: Sequelize.STRING
+            section_count: {
+                type: Sequelize.INTEGER
             },
             Capacity: {
                 type: Sequelize.INTEGER,
@@ -288,6 +291,9 @@ module.exports = (Sequelize, sequelize) => {
                 type: Sequelize.DOUBLE,
             },
             DischargeR3: {
+                type: Sequelize.DOUBLE,
+            },
+            SuctionR3: {
                 type: Sequelize.DOUBLE,
             }
         }, {

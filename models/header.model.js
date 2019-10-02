@@ -1,14 +1,14 @@
 module.exports = (Sequelize, sequelize) => {
-    return sequelize.define('Header',{
+    return sequelize.define('Header', {
             header_uid: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
             lgmv_date: {
-            type: Sequelize.STRING,
-            nullable: false
-        },
+                type: Sequelize.STRING,
+                nullable: false
+            },
             lgmv_model_name: {
                 type: Sequelize.STRING,
                 nullable: false
@@ -54,12 +54,6 @@ module.exports = (Sequelize, sequelize) => {
             },
             calorimeter_od_wb: {
                 type: Sequelize.DOUBLE
-            },
-            conn_file_date: {
-                type: Sequelize.STRING
-            },
-            conn_file_time: {
-                type: Sequelize.STRING
             },
             idu_chassis: {
                 type: Sequelize.STRING
@@ -136,12 +130,33 @@ module.exports = (Sequelize, sequelize) => {
             lgmv_unit_flux: {
                 type: Sequelize.STRING
             },
+            calorimeter_unit_cap: {
+                type: Sequelize.STRING
+            },
+            calorimeter_unit_EER: {
+                type: Sequelize.STRING
+            },
             summary_graph_id: {
                 type: Sequelize.STRING
             },
-
-
-
+            conn_ida_db_gap: {
+                type: Sequelize.DOUBLE
+            },
+            conn_ida_wb_gap: {
+                type: Sequelize.DOUBLE
+            },
+            conn_idb_db_gap: {
+                type: Sequelize.DOUBLE
+            },
+            conn_idb_wb_gap: {
+                type: Sequelize.DOUBLE
+            },
+            conn_od_db_gap: {
+                type: Sequelize.DOUBLE
+            },
+            conn_od_wb_gap: {
+                type: Sequelize.DOUBLE
+            }
         }, {
             freezeTableName: true,
             timestamps: false

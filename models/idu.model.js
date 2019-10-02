@@ -5,7 +5,13 @@ module.exports = (Sequelize, sequelize) => {
                 primaryKey: true,
                 autoIncrement: true
             },
+            TXT_TIME: {
+                type: Sequelize.STRING,
+            },
             header_uid: {
+                type: Sequelize.INTEGER
+            },
+            section_count: {
                 type: Sequelize.INTEGER
             },
             TXT_IDU_CAPACITY: {
@@ -50,7 +56,6 @@ module.exports = (Sequelize, sequelize) => {
             TXT_IDU_SCSH_TGT2: {
                 type: Sequelize.DOUBLE,
             }
-
         }, {
             freezeTableName: true,
             timestamps: false

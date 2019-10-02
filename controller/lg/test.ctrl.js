@@ -406,7 +406,7 @@ const overview = (req, res) => {
 
 const data_search_id = (req, res) => {
     const uid = req.body.header_uid;
-
+    console.log(req.body)
     const result = {};
 
     db.Header.findOne({

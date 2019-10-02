@@ -5,7 +5,13 @@ module.exports = (Sequelize, sequelize) => {
                 primaryKey: true,
                 autoIncrement: true
             },
+            TXT_TIME: {
+                type: Sequelize.STRING,
+            },
             header_uid: {
+                type: Sequelize.INTEGER
+            },
+            section_count: {
                 type: Sequelize.INTEGER
             },
             TXT_SIDU_NUMBER: {
