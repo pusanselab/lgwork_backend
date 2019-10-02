@@ -8,6 +8,12 @@ module.exports = (Sequelize, sequelize) => {
             header_uid: {
                 type: Sequelize.INTEGER
             },
+            section_count: {
+                type: Sequelize.INTEGER
+            },
+            TXT_TIME: {
+                type: Sequelize.STRING
+            },
             TXT_HIGH_PRESSURE_TARGETTING: {
                 type: Sequelize.INTEGER,
             },

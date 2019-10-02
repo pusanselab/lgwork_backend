@@ -1,0 +1,4 @@
+[ (명령 프롬프트 or Terminal) 에서 실행해야 합니다. ] 
+1. python -m pip install pandas 
+2. python -m pip install pymysql
+3. python -m pip install sqlalchemy

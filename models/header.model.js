@@ -5,6 +5,9 @@ module.exports = (Sequelize, sequelize) => {
                 primaryKey: true,
                 autoIncrement: true
             },
+            lgmv_date : {
+                type: Sequelize.STRING,
+            },
             lgmv_model_name: {
                 type: Sequelize.STRING,
                 nullable: false
@@ -51,12 +54,6 @@ module.exports = (Sequelize, sequelize) => {
             calorimeter_od_wb: {
                 type: Sequelize.DOUBLE
             },
-            conn_file_date: {
-                type: Sequelize.STRING
-            },
-            conn_file_time: {
-                type: Sequelize.STRING
-            },
             idu_chassis: {
                 type: Sequelize.STRING
             },
@@ -66,7 +63,7 @@ module.exports = (Sequelize, sequelize) => {
             plm_step1: {
                 type: Sequelize.STRING
             },
-            plm_stetp2: {
+            plm_step2: {
                 type: Sequelize.STRING
             },
             test_step1: {
@@ -90,36 +87,6 @@ module.exports = (Sequelize, sequelize) => {
             conn_memo: {
                 type: Sequelize.STRING
             },
-            lgmv_odu_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_idu_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_hru_count: {
-                type: Sequelize.INTEGER
-            },
-            calorimeter_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_dxc_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_awhp_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_showcase_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_fau_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_whu_count: {
-                type: Sequelize.INTEGER
-            },
-            lgmv_sidu_cascade_count: {
-                type: Sequelize.INTEGER
-            },
             lgmv_unit_temp: {
                 type: Sequelize.STRING
             },
@@ -129,8 +96,6 @@ module.exports = (Sequelize, sequelize) => {
             lgmv_unit_flux: {
                 type: Sequelize.STRING
             },
-
-
         }, {
             freezeTableName: true,
             timestamps: false
