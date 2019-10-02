@@ -648,7 +648,11 @@ const graph_idu = (req, res) => {
     const section_count = req.body.section_count
     const column_name = req.body.column_name
 
-    const result = {}
+    const result = {
+        content:{
+            model : []
+        }
+    }
 
     db.Idu.findAll({
         where : {
@@ -663,7 +667,7 @@ const graph_idu = (req, res) => {
             return res.json(result)
         }else{
             console.log(send_data)
-            result.content = send_data
+            result.content.model = send_data
             result.code = 200
             result.message = "success"
             console.log(result)
