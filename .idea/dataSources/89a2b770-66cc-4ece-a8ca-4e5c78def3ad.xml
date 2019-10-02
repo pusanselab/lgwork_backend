@@ -894,8 +894,8 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="224" parent="3" name="calorimeter"/>
-    <table id="225" parent="3" name="header"/>
+    <table id="224" parent="3" name="calolimeter"/>
+    <table id="225" parent="3" name="calorimeter"/>
     <table id="226" parent="3" name="hru"/>
     <table id="227" parent="3" name="idu"/>
     <table id="228" parent="3" name="odu"/>
@@ -906,2051 +906,2276 @@
     <table id="233" parent="3" name="sidu_showcase"/>
     <table id="234" parent="3" name="sidu_whu"/>
     <table id="235" parent="3" name="user"/>
-    <column id="236" parent="224" name="calorimeter_uid">
+    <column id="236" parent="224" name="calolimeter_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="224" name="TXT_TIME">
+    <column id="237" parent="224" name="header_uid">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="238" parent="224" name="header_uid">
-      <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="224" name="section_count">
+    <column id="238" parent="224" name="TXT_TIME">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="224" name="Capacity">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="224" name="Capacity">
+    <column id="240" parent="224" name="EER">
       <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="241" parent="224" name="EER">
-      <Position>6</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="224" name="Power">
+    <column id="241" parent="224" name="Power">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="224" name="Current">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="224" name="Current">
+    <column id="243" parent="224" name="Voltage">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="224" name="Voltage">
+    <column id="244" parent="224" name="Power_Factor">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="224" name="Power_Factor">
+    <column id="245" parent="224" name="Power_Frequency">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="224" name="Power_Frequency">
+    <column id="246" parent="224" name="Capacity_Ratio">
       <Position>11</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="224" name="Capacity_Ratio">
+    <column id="247" parent="224" name="EER_Ratio">
       <Position>12</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="224" name="EER_Ratio">
+    <column id="248" parent="224" name="Power_Ratio">
       <Position>13</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="224" name="Power_Ratio">
+    <column id="249" parent="224" name="Current_Ratio">
       <Position>14</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="224" name="Current_Ratio">
+    <column id="250" parent="224" name="Air_Flow">
       <Position>15</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="224" name="Air_Flow">
+    <column id="251" parent="224" name="ID_Entering_DB">
       <Position>16</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="224" name="ID_Entering_DB">
+    <column id="252" parent="224" name="ID_Entering_WB">
       <Position>17</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="224" name="ID_Entering_WB">
+    <column id="253" parent="224" name="ID_Leaving_DB">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="224" name="ID_Leaving_DB">
+    <column id="254" parent="224" name="ID_Leaving_WB">
       <Position>19</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="224" name="ID_Leaving_WB">
+    <column id="255" parent="224" name="OD_Entering_DB">
       <Position>20</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="224" name="OD_Entering_DB">
+    <column id="256" parent="224" name="OD_Entering_WB">
       <Position>21</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="224" name="OD_Entering_WB">
+    <column id="257" parent="224" name="Enthalpy_Entering">
       <Position>22</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="224" name="Enthalpy_Entering">
+    <column id="258" parent="224" name="Enthalpy_Leaving">
       <Position>23</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="224" name="Enthalpy_Leaving">
+    <column id="259" parent="224" name="Abs_Humidity_Entering">
       <Position>24</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="224" name="Abs_Humidity_Entering">
+    <column id="260" parent="224" name="Abs_Humidity_Leaving">
       <Position>25</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="224" name="Abs_Humidity_Leaving">
+    <column id="261" parent="224" name="Specific_Heat_Leaving">
       <Position>26</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="224" name="Specific_Heat_Leaving">
+    <column id="262" parent="224" name="Specific_Volume_Leaving">
       <Position>27</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="224" name="Specific_Volume_Leaving">
+    <column id="263" parent="224" name="Heat_Leakage">
       <Position>28</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="264" parent="224" name="Heat_Leakage">
-      <Position>29</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="224" name="Condensate_Weight">
-      <Position>30</Position>
+    <column id="264" parent="224" name="Condensate_Weight">
+      <Position>29</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="224" name="Latent_Capacity">
+    <column id="265" parent="224" name="Latent_Capacity">
+      <Position>30</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="224" name="Sensible_Capacity">
       <Position>31</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="224" name="Sensible_Capacity">
+    <column id="267" parent="224" name="Sensible_Heat_Ratio">
       <Position>32</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="268" parent="224" name="Sensible_Heat_Ratio">
-      <Position>33</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="224" name="Static_Pressure">
+    <column id="268" parent="224" name="Static_Pressure">
+      <Position>33</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="224" name="Nozzle_Diff">
       <Position>34</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="224" name="Nozzle_Diff">
+    <column id="270" parent="224" name="Barometric_Pressure">
       <Position>35</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="224" name="Barometric_Pressure">
+    <column id="271" parent="224" name="TC_1">
       <Position>36</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="224" name="TC_1">
+    <column id="272" parent="224" name="TC_2">
       <Position>37</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="224" name="TC_2">
+    <column id="273" parent="224" name="TC_3">
       <Position>38</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="224" name="TC_3">
+    <column id="274" parent="224" name="TC_4">
       <Position>39</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="224" name="TC_4">
+    <column id="275" parent="224" name="TC_5">
       <Position>40</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="224" name="TC_5">
+    <column id="276" parent="224" name="TC_6">
       <Position>41</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="224" name="TC_6">
+    <column id="277" parent="224" name="TC_7">
       <Position>42</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="224" name="TC_7">
+    <column id="278" parent="224" name="TC_8">
       <Position>43</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="224" name="TC_8">
+    <column id="279" parent="224" name="TC_9">
       <Position>44</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="224" name="TC_9">
+    <column id="280" parent="224" name="TC_10">
       <Position>45</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="224" name="TC_10">
+    <column id="281" parent="224" name="TC_11">
       <Position>46</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="224" name="TC_11">
+    <column id="282" parent="224" name="TC_12">
       <Position>47</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="224" name="TC_12">
+    <column id="283" parent="224" name="TC_13">
       <Position>48</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="224" name="TC_13">
+    <column id="284" parent="224" name="TC_14">
       <Position>49</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="224" name="TC_14">
+    <column id="285" parent="224" name="TC_15">
       <Position>50</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="224" name="TC_15">
+    <column id="286" parent="224" name="TC_16">
       <Position>51</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="224" name="TC_16">
+    <column id="287" parent="224" name="TC_17">
       <Position>52</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="224" name="TC_17">
+    <column id="288" parent="224" name="TC_18">
       <Position>53</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="224" name="TC_18">
+    <column id="289" parent="224" name="TC_19">
       <Position>54</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="224" name="TC_19">
+    <column id="290" parent="224" name="TC_20">
       <Position>55</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="224" name="TC_20">
+    <column id="291" parent="224" name="TC_21">
       <Position>56</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="224" name="TC_21">
+    <column id="292" parent="224" name="TC_22">
       <Position>57</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="224" name="TC_22">
+    <column id="293" parent="224" name="TC_23">
       <Position>58</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="224" name="TC_23">
+    <column id="294" parent="224" name="TC_24">
       <Position>59</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="224" name="TC_24">
+    <column id="295" parent="224" name="TC_25">
       <Position>60</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="224" name="TC_25">
+    <column id="296" parent="224" name="TC_26">
       <Position>61</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="224" name="TC_26">
+    <column id="297" parent="224" name="TC_27">
       <Position>62</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="224" name="TC_27">
+    <column id="298" parent="224" name="TC_28">
       <Position>63</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="224" name="TC_28">
+    <column id="299" parent="224" name="TC_29">
       <Position>64</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="224" name="TC_29">
+    <column id="300" parent="224" name="TC_30">
       <Position>65</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="224" name="TC_30">
+    <column id="301" parent="224" name="TC_31">
       <Position>66</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="224" name="TC_31">
+    <column id="302" parent="224" name="TC_32">
       <Position>67</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="224" name="TC_32">
+    <column id="303" parent="224" name="TC_33">
       <Position>68</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="224" name="TC_33">
+    <column id="304" parent="224" name="TC_34">
       <Position>69</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="224" name="TC_34">
+    <column id="305" parent="224" name="TC_35">
       <Position>70</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="224" name="TC_35">
+    <column id="306" parent="224" name="TC_36">
       <Position>71</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="224" name="TC_36">
+    <column id="307" parent="224" name="TC_37">
       <Position>72</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="224" name="TC_37">
+    <column id="308" parent="224" name="TC_38">
       <Position>73</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="224" name="TC_38">
+    <column id="309" parent="224" name="TC_39">
       <Position>74</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="224" name="TC_39">
+    <column id="310" parent="224" name="TC_40">
       <Position>75</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="224" name="TC_40">
+    <column id="311" parent="224" name="TC_41">
       <Position>76</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="224" name="TC_41">
+    <column id="312" parent="224" name="TC_42">
       <Position>77</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="224" name="TC_42">
+    <column id="313" parent="224" name="TC_43">
       <Position>78</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="224" name="TC_43">
+    <column id="314" parent="224" name="TC_44">
       <Position>79</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="224" name="TC_44">
+    <column id="315" parent="224" name="TC_45">
       <Position>80</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="224" name="TC_45">
+    <column id="316" parent="224" name="TC_46">
       <Position>81</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="224" name="TC_46">
+    <column id="317" parent="224" name="TC_47">
       <Position>82</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="224" name="TC_47">
+    <column id="318" parent="224" name="TC_48">
       <Position>83</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="224" name="TC_48">
+    <column id="319" parent="224" name="TC_49">
       <Position>84</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="224" name="TC_49">
+    <column id="320" parent="224" name="TC_50">
       <Position>85</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="224" name="TC_50">
+    <column id="321" parent="224" name="TC_51">
       <Position>86</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="224" name="TC_51">
+    <column id="322" parent="224" name="TC_52">
       <Position>87</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="224" name="TC_52">
+    <column id="323" parent="224" name="TC_53">
       <Position>88</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="224" name="TC_53">
+    <column id="324" parent="224" name="TC_54">
       <Position>89</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="224" name="TC_54">
+    <column id="325" parent="224" name="TC_55">
       <Position>90</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="224" name="TC_55">
+    <column id="326" parent="224" name="TC_56">
       <Position>91</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="224" name="TC_56">
+    <column id="327" parent="224" name="TC_57">
       <Position>92</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="224" name="TC_57">
+    <column id="328" parent="224" name="TC_58">
       <Position>93</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="224" name="TC_58">
+    <column id="329" parent="224" name="TC_59">
       <Position>94</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="224" name="TC_59">
+    <column id="330" parent="224" name="TC_60">
       <Position>95</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="224" name="TC_60">
+    <column id="331" parent="224" name="DischargeR3">
       <Position>96</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="224" name="DischargeR3">
+    <key id="332" parent="224" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>calolimeter_uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="333" parent="225" name="calorimeter_uid">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="334" parent="225" name="TXT_TIME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="335" parent="225" name="header_uid">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="336" parent="225" name="section_count">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="337" parent="225" name="Capacity">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="338" parent="225" name="EER">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="339" parent="225" name="Power">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="340" parent="225" name="Current">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="341" parent="225" name="Voltage">
+      <Position>9</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="225" name="Power_Factor">
+      <Position>10</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="225" name="Power_Frequency">
+      <Position>11</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="344" parent="225" name="Capacity_Ratio">
+      <Position>12</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="345" parent="225" name="EER_Ratio">
+      <Position>13</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="346" parent="225" name="Power_Ratio">
+      <Position>14</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="347" parent="225" name="Current_Ratio">
+      <Position>15</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="348" parent="225" name="Air_Flow">
+      <Position>16</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="349" parent="225" name="ID_Entering_DB">
+      <Position>17</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="225" name="ID_Entering_WB">
+      <Position>18</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="351" parent="225" name="ID_Leaving_DB">
+      <Position>19</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="352" parent="225" name="ID_Leaving_WB">
+      <Position>20</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="225" name="OD_Entering_DB">
+      <Position>21</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="354" parent="225" name="OD_Entering_WB">
+      <Position>22</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="355" parent="225" name="Enthalpy_Entering">
+      <Position>23</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="356" parent="225" name="Enthalpy_Leaving">
+      <Position>24</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="225" name="Abs_Humidity_Entering">
+      <Position>25</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="225" name="Abs_Humidity_Leaving">
+      <Position>26</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="225" name="Specific_Heat_Leaving">
+      <Position>27</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="225" name="Specific_Volume_Leaving">
+      <Position>28</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="361" parent="225" name="Heat_Leakage">
+      <Position>29</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="362" parent="225" name="Condensate_Weight">
+      <Position>30</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="225" name="Latent_Capacity">
+      <Position>31</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="225" name="Sensible_Capacity">
+      <Position>32</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="365" parent="225" name="Sensible_Heat_Ratio">
+      <Position>33</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="366" parent="225" name="Static_Pressure">
+      <Position>34</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="367" parent="225" name="Nozzle_Diff">
+      <Position>35</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="368" parent="225" name="Barometric_Pressure">
+      <Position>36</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="225" name="TC_1">
+      <Position>37</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="225" name="TC_2">
+      <Position>38</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="225" name="TC_3">
+      <Position>39</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="372" parent="225" name="TC_4">
+      <Position>40</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="373" parent="225" name="TC_5">
+      <Position>41</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="374" parent="225" name="TC_6">
+      <Position>42</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="375" parent="225" name="TC_7">
+      <Position>43</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="376" parent="225" name="TC_8">
+      <Position>44</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="377" parent="225" name="TC_9">
+      <Position>45</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="378" parent="225" name="TC_10">
+      <Position>46</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="379" parent="225" name="TC_11">
+      <Position>47</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="380" parent="225" name="TC_12">
+      <Position>48</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="381" parent="225" name="TC_13">
+      <Position>49</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="382" parent="225" name="TC_14">
+      <Position>50</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="225" name="TC_15">
+      <Position>51</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="384" parent="225" name="TC_16">
+      <Position>52</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="225" name="TC_17">
+      <Position>53</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="225" name="TC_18">
+      <Position>54</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="387" parent="225" name="TC_19">
+      <Position>55</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="388" parent="225" name="TC_20">
+      <Position>56</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="389" parent="225" name="TC_21">
+      <Position>57</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="390" parent="225" name="TC_22">
+      <Position>58</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="391" parent="225" name="TC_23">
+      <Position>59</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="225" name="TC_24">
+      <Position>60</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="225" name="TC_25">
+      <Position>61</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="394" parent="225" name="TC_26">
+      <Position>62</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="395" parent="225" name="TC_27">
+      <Position>63</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="396" parent="225" name="TC_28">
+      <Position>64</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="397" parent="225" name="TC_29">
+      <Position>65</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="225" name="TC_30">
+      <Position>66</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="225" name="TC_31">
+      <Position>67</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="225" name="TC_32">
+      <Position>68</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="401" parent="225" name="TC_33">
+      <Position>69</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="402" parent="225" name="TC_34">
+      <Position>70</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="403" parent="225" name="TC_35">
+      <Position>71</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="404" parent="225" name="TC_36">
+      <Position>72</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="405" parent="225" name="TC_37">
+      <Position>73</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="406" parent="225" name="TC_38">
+      <Position>74</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="407" parent="225" name="TC_39">
+      <Position>75</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="408" parent="225" name="TC_40">
+      <Position>76</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="409" parent="225" name="TC_41">
+      <Position>77</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="410" parent="225" name="TC_42">
+      <Position>78</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="411" parent="225" name="TC_43">
+      <Position>79</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="412" parent="225" name="TC_44">
+      <Position>80</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="413" parent="225" name="TC_45">
+      <Position>81</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="414" parent="225" name="TC_46">
+      <Position>82</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="415" parent="225" name="TC_47">
+      <Position>83</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="416" parent="225" name="TC_48">
+      <Position>84</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="417" parent="225" name="TC_49">
+      <Position>85</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="418" parent="225" name="TC_50">
+      <Position>86</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="419" parent="225" name="TC_51">
+      <Position>87</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="420" parent="225" name="TC_52">
+      <Position>88</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="421" parent="225" name="TC_53">
+      <Position>89</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="422" parent="225" name="TC_54">
+      <Position>90</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="423" parent="225" name="TC_55">
+      <Position>91</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="424" parent="225" name="TC_56">
+      <Position>92</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="425" parent="225" name="TC_57">
+      <Position>93</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="426" parent="225" name="TC_58">
+      <Position>94</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="427" parent="225" name="TC_59">
+      <Position>95</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="428" parent="225" name="TC_60">
+      <Position>96</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="429" parent="225" name="DischargeR3">
       <Position>97</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="224" name="SuctionR3">
+    <column id="430" parent="225" name="SuctionR3">
       <Position>98</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="334" parent="224" name="PRIMARY">
+    <key id="431" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>calorimeter_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="335" parent="225" name="header_uid">
+    <column id="432" parent="226" name="hru_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="225" name="lgmv_date">
+    <column id="433" parent="226" name="TXT_TIME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="225" name="lgmv_model_name">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="338" parent="225" name="lgmv_serial_number">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="339" parent="225" name="lgmv_model_filter1">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="340" parent="225" name="lgmv_model_filter2">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="341" parent="225" name="lgmv_r">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="342" parent="225" name="lgmv_main_ver">
-      <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="343" parent="225" name="lgmv_eep_ver">
-      <Position>9</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="344" parent="225" name="calorimeter_cap">
-      <Position>10</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="345" parent="225" name="calorimeter_power">
-      <Position>11</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="346" parent="225" name="calorimeter_eer">
-      <Position>12</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="347" parent="225" name="calorimeter_power_vol">
-      <Position>13</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="348" parent="225" name="calorimeter_id_wb">
-      <Position>14</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="349" parent="225" name="calorimeter_id_db">
-      <Position>15</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="350" parent="225" name="calorimeter_od_db">
-      <Position>16</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="351" parent="225" name="calorimeter_od_wb">
-      <Position>17</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="352" parent="225" name="idu_chassis">
-      <Position>18</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="353" parent="225" name="odu_chassis">
-      <Position>19</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="354" parent="225" name="plm_step1">
-      <Position>20</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="355" parent="225" name="plm_step2">
-      <Position>21</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="356" parent="225" name="test_step1">
-      <Position>22</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="357" parent="225" name="test_step2">
-      <Position>23</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="358" parent="225" name="conn_tester">
-      <Position>24</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="359" parent="225" name="conn_testroom_number">
-      <Position>25</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="360" parent="225" name="conn_pipe_type">
-      <Position>26</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="361" parent="225" name="conn_test_result">
-      <Position>27</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="362" parent="225" name="conn_memo">
-      <Position>28</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="363" parent="225" name="conn_operation_rate">
-      <Position>29</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="364" parent="225" name="lgmv_odu_count">
-      <Position>30</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="365" parent="225" name="lgmv_idu_count">
-      <Position>31</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="366" parent="225" name="lgmv_hru_count">
-      <Position>32</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="367" parent="225" name="calorimeter_count">
-      <Position>33</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="368" parent="225" name="lgmv_sidu_dxc_count">
-      <Position>34</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="369" parent="225" name="lgmv_sidu_awhp_count">
-      <Position>35</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="370" parent="225" name="lgmv_sidu_showcase_count">
-      <Position>36</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="371" parent="225" name="lgmv_sidu_fau_count">
-      <Position>37</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="372" parent="225" name="lgmv_sidu_whu_count">
-      <Position>38</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="373" parent="225" name="lgmv_sidu_cascade_count">
-      <Position>39</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="374" parent="225" name="lgmv_unit_temp">
-      <Position>40</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="375" parent="225" name="lgmv_unit_press">
-      <Position>41</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="376" parent="225" name="lgmv_unit_flux">
-      <Position>42</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="377" parent="225" name="calorimeter_unit_cap">
-      <Position>43</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="378" parent="225" name="calorimeter_unit_EER">
-      <Position>44</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="379" parent="225" name="summary_graph_id">
-      <Position>45</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="380" parent="225" name="conn_ida_db_gap">
-      <Position>46</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="381" parent="225" name="conn_ida_wb_gap">
-      <Position>47</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="382" parent="225" name="conn_idb_db_gap">
-      <Position>48</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="383" parent="225" name="conn_idb_wb_gap">
-      <Position>49</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="384" parent="225" name="conn_od_db_gap">
-      <Position>50</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="385" parent="225" name="conn_od_wb_gap">
-      <Position>51</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="386" parent="225" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>header_uid</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="387" parent="226" name="hru_uid">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="388" parent="226" name="TXT_TIME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="389" parent="226" name="header_uid">
+    <column id="434" parent="226" name="header_uid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="226" name="section_count">
+    <column id="435" parent="226" name="section_count">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="226" name="TXT_HRU_NUMBER">
+    <column id="436" parent="226" name="TXT_HRU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="392" parent="226" name="TXT_HRU_VERSION">
+    <column id="437" parent="226" name="TXT_HRU_VERSION">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="226" name="TXT_HRU_PIPE1_STATE">
+    <column id="438" parent="226" name="TXT_HRU_PIPE1_STATE">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="226" name="TXT_HRU_PIPE2_STATE">
+    <column id="439" parent="226" name="TXT_HRU_PIPE2_STATE">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="226" name="TXT_HRU_PIPE3_STATE">
+    <column id="440" parent="226" name="TXT_HRU_PIPE3_STATE">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="226" name="TXT_HRU_PIPE4_STATE">
+    <column id="441" parent="226" name="TXT_HRU_PIPE4_STATE">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="226" name="TXT_HRU_PIPE5_STATE">
+    <column id="442" parent="226" name="TXT_HRU_PIPE5_STATE">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="226" name="TXT_HRU_PIPE6_STATE">
+    <column id="443" parent="226" name="TXT_HRU_PIPE6_STATE">
       <Position>12</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="399" parent="226" name="TXT_HRU_PIPE7_STATE">
+    <column id="444" parent="226" name="TXT_HRU_PIPE7_STATE">
       <Position>13</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="400" parent="226" name="TXT_HRU_PIPE8_STATE">
+    <column id="445" parent="226" name="TXT_HRU_PIPE8_STATE">
       <Position>14</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="401" parent="226" name="TXT_HRU_EEV">
+    <column id="446" parent="226" name="TXT_HRU_EEV">
       <Position>15</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="402" parent="226" name="TXT_HRU_LIQUID_PIPE_TEMP">
+    <column id="447" parent="226" name="TXT_HRU_LIQUID_PIPE_TEMP">
       <Position>16</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="226" name="TXT_HRU_PIPE_IN_TEMP">
+    <column id="448" parent="226" name="TXT_HRU_PIPE_IN_TEMP">
       <Position>17</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="226" name="TXT_HRU_PIPE_OUT_TEMP">
+    <column id="449" parent="226" name="TXT_HRU_PIPE_OUT_TEMP">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="405" parent="226" name="TXT_HRU_SEARCHED_IDU">
+    <column id="450" parent="226" name="TXT_HRU_SEARCHED_IDU">
       <Position>19</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="226" name="TXT_HRU_SET_IDU">
+    <column id="451" parent="226" name="TXT_HRU_SET_IDU">
       <Position>20</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="226" name="TXT_HRU_PIPE_SEARCH_END">
+    <column id="452" parent="226" name="TXT_HRU_PIPE_SEARCH_END">
       <Position>21</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="408" parent="226" name="TXT_HRU_PIPE_SEARCH_ENABLE">
+    <column id="453" parent="226" name="TXT_HRU_PIPE_SEARCH_ENABLE">
       <Position>22</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="226" name="TXT_HRU_SCEEV1">
+    <column id="454" parent="226" name="TXT_HRU_SCEEV1">
       <Position>23</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="226" name="TXT_HRU_MID_EEV1">
+    <column id="455" parent="226" name="TXT_HRU_MID_EEV1">
       <Position>24</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="226" name="TXT_HRU_MID_EEV2">
+    <column id="456" parent="226" name="TXT_HRU_MID_EEV2">
       <Position>25</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="226" name="TXT_HRU_MID_EEV3">
+    <column id="457" parent="226" name="TXT_HRU_MID_EEV3">
       <Position>26</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="413" parent="226" name="TXT_HRU_MID_EEV4">
+    <column id="458" parent="226" name="TXT_HRU_MID_EEV4">
       <Position>27</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="414" parent="226" name="TXT_HRU_MID_EEV5">
+    <column id="459" parent="226" name="TXT_HRU_MID_EEV5">
       <Position>28</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="415" parent="226" name="TXT_HRU_MID_EEV6">
+    <column id="460" parent="226" name="TXT_HRU_MID_EEV6">
       <Position>29</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="416" parent="226" name="TXT_HRU_MID_EEV7">
+    <column id="461" parent="226" name="TXT_HRU_MID_EEV7">
       <Position>30</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="417" parent="226" name="TXT_HRU_MID_EEV8">
+    <column id="462" parent="226" name="TXT_HRU_MID_EEV8">
       <Position>31</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="418" parent="226" name="PRIMARY">
+    <key id="463" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>hru_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="419" parent="227" name="idu_uid">
+    <column id="464" parent="227" name="idu_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="227" name="TXT_TIME">
+    <column id="465" parent="227" name="TXT_TIME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="421" parent="227" name="header_uid">
+    <column id="466" parent="227" name="header_uid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="422" parent="227" name="section_count">
+    <column id="467" parent="227" name="section_count">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="423" parent="227" name="TXT_IDU_CAPACITY">
+    <column id="468" parent="227" name="TXT_IDU_CAPACITY">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="424" parent="227" name="TXT_IDU_MODE">
+    <column id="469" parent="227" name="TXT_IDU_MODE">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="425" parent="227" name="TXT_IDU_WIND">
+    <column id="470" parent="227" name="TXT_IDU_WIND">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="426" parent="227" name="TXT_IDU_EEV">
+    <column id="471" parent="227" name="TXT_IDU_EEV">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="427" parent="227" name="TXT_IDU_AIR_TEMP">
+    <column id="472" parent="227" name="TXT_IDU_AIR_TEMP">
       <Position>9</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="428" parent="227" name="TXT_IDU_PIPE_IN_TEMP">
+    <column id="473" parent="227" name="TXT_IDU_PIPE_IN_TEMP">
       <Position>10</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="429" parent="227" name="TXT_IDU_PIPE_OUT_TEMP">
+    <column id="474" parent="227" name="TXT_IDU_PIPE_OUT_TEMP">
       <Position>11</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="430" parent="227" name="TXT_IDU_COMMUNICATION">
+    <column id="475" parent="227" name="TXT_IDU_COMMUNICATION">
       <Position>12</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="431" parent="227" name="TXT_IDU_CENTRAL_CONTROL_ADDRESS">
+    <column id="476" parent="227" name="TXT_IDU_CENTRAL_CONTROL_ADDRESS">
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="432" parent="227" name="TXT_IDU_ERROR_NUMBER">
+    <column id="477" parent="227" name="TXT_IDU_ERROR_NUMBER">
       <Position>14</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="433" parent="227" name="TXT_OUT_HUMIDITY">
+    <column id="478" parent="227" name="TXT_OUT_HUMIDITY">
       <Position>15</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="434" parent="227" name="TXT_IDU_LOCK">
+    <column id="479" parent="227" name="TXT_IDU_LOCK">
       <Position>16</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="435" parent="227" name="TXT_IDU_SCSH_TGT">
+    <column id="480" parent="227" name="TXT_IDU_SCSH_TGT">
       <Position>17</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="436" parent="227" name="TXT_IDU_SCSH_TGT2">
+    <column id="481" parent="227" name="TXT_IDU_SCSH_TGT2">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="437" parent="227" name="PRIMARY">
+    <key id="482" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idu_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="438" parent="228" name="odu_uid">
+    <column id="483" parent="228" name="odu_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="439" parent="228" name="TXT_TIME">
+    <column id="484" parent="228" name="TXT_TIME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="440" parent="228" name="header_uid">
+    <column id="485" parent="228" name="header_uid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="441" parent="228" name="section_count">
+    <column id="486" parent="228" name="section_count">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="442" parent="228" name="TXT_HIGH_PRESSURE_TARGETTING">
+    <column id="487" parent="228" name="TXT_HIGH_PRESSURE_TARGETTING">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="443" parent="228" name="TXT_HIGH_PRESSURE_TRACE">
+    <column id="488" parent="228" name="TXT_HIGH_PRESSURE_TRACE">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="444" parent="228" name="TXT_IDU_TEMP_WEIGHTED_AVERAGE">
+    <column id="489" parent="228" name="TXT_IDU_TEMP_WEIGHTED_AVERAGE">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="445" parent="228" name="TXT_LOW_PRESSURE_TARGETTING">
+    <column id="490" parent="228" name="TXT_LOW_PRESSURE_TARGETTING">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="446" parent="228" name="TXT_LOW_PRESSURE_TRACE">
+    <column id="491" parent="228" name="TXT_LOW_PRESSURE_TRACE">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="447" parent="228" name="TXT_COMP_RATIO">
+    <column id="492" parent="228" name="TXT_COMP_RATIO">
       <Position>10</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="448" parent="228" name="TXT_SH_TARGETTING">
+    <column id="493" parent="228" name="TXT_SH_TARGETTING">
       <Position>11</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="449" parent="228" name="TXT_SH_TRACE">
+    <column id="494" parent="228" name="TXT_SH_TRACE">
       <Position>12</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="450" parent="228" name="TXT_SC_TRACE">
+    <column id="495" parent="228" name="TXT_SC_TRACE">
       <Position>13</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="451" parent="228" name="TXT_SCSH_TARGETTING">
+    <column id="496" parent="228" name="TXT_SCSH_TARGETTING">
       <Position>14</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="452" parent="228" name="TXT_SCSH_TRACE">
+    <column id="497" parent="228" name="TXT_SCSH_TRACE">
       <Position>15</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="453" parent="228" name="TXT_ACCUM">
+    <column id="498" parent="228" name="TXT_ACCUM">
       <Position>16</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="454" parent="228" name="TXT_4WAY">
+    <column id="499" parent="228" name="TXT_4WAY">
       <Position>17</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="455" parent="228" name="TXT_ACT_HEX_VAPOER_VALVE">
+    <column id="500" parent="228" name="TXT_ACT_HEX_VAPOER_VALVE">
       <Position>18</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="456" parent="228" name="TXT_EQ_VALVE">
+    <column id="501" parent="228" name="TXT_EQ_VALVE">
       <Position>19</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="457" parent="228" name="TXT_RECEIVER_IN">
+    <column id="502" parent="228" name="TXT_RECEIVER_IN">
       <Position>20</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="458" parent="228" name="TXT_RECEIVER_OUT">
+    <column id="503" parent="228" name="TXT_RECEIVER_OUT">
       <Position>21</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="459" parent="228" name="TXT_VAPOR_INJECTION">
+    <column id="504" parent="228" name="TXT_VAPOR_INJECTION">
       <Position>22</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="460" parent="228" name="TXT_COMP1_OIL_LEVEL">
+    <column id="505" parent="228" name="TXT_COMP1_OIL_LEVEL">
       <Position>23</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="461" parent="228" name="TXT_COMP2_OIL_LEVEL">
+    <column id="506" parent="228" name="TXT_COMP2_OIL_LEVEL">
       <Position>24</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="462" parent="228" name="TXT_HEX_HIGH">
+    <column id="507" parent="228" name="TXT_HEX_HIGH">
       <Position>25</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="463" parent="228" name="TXT_HEX_LOW">
+    <column id="508" parent="228" name="TXT_HEX_LOW">
       <Position>26</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="464" parent="228" name="TXT_INV_PREHEAT">
+    <column id="509" parent="228" name="TXT_INV_PREHEAT">
       <Position>27</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="465" parent="228" name="TXT_INV2_PREHEAT">
+    <column id="510" parent="228" name="TXT_INV2_PREHEAT">
       <Position>28</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="466" parent="228" name="TXT_ACTIVE_OIL1">
+    <column id="511" parent="228" name="TXT_ACTIVE_OIL1">
       <Position>29</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="467" parent="228" name="TXT_ACTIVE_OIL2">
+    <column id="512" parent="228" name="TXT_ACTIVE_OIL2">
       <Position>30</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="468" parent="228" name="TXT_ODU_DRY_CONTACT">
+    <column id="513" parent="228" name="TXT_ODU_DRY_CONTACT">
       <Position>31</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="469" parent="228" name="TXT_SNOW_DEEP">
+    <column id="514" parent="228" name="TXT_SNOW_DEEP">
       <Position>32</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="470" parent="228" name="TXT_INV1_TARGETTING_N_TRACE">
+    <column id="515" parent="228" name="TXT_INV1_TARGETTING_N_TRACE">
       <Position>33</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="471" parent="228" name="TXT_INV2_TARGETTING_N_TRACE">
+    <column id="516" parent="228" name="TXT_INV2_TARGETTING_N_TRACE">
       <Position>34</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="472" parent="228" name="TXT_FAN1_TARGETTING">
+    <column id="517" parent="228" name="TXT_FAN1_TARGETTING">
       <Position>35</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="473" parent="228" name="TXT_FAN1_TRACE">
+    <column id="518" parent="228" name="TXT_FAN1_TRACE">
       <Position>36</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="474" parent="228" name="TXT_FAN2_TARGETTING">
+    <column id="519" parent="228" name="TXT_FAN2_TARGETTING">
       <Position>37</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="475" parent="228" name="TXT_FAN2_TRACE">
+    <column id="520" parent="228" name="TXT_FAN2_TRACE">
       <Position>38</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="476" parent="228" name="TXT_MAIN_EEV">
+    <column id="521" parent="228" name="TXT_MAIN_EEV">
       <Position>39</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="477" parent="228" name="TXT_SUB_EEV">
+    <column id="522" parent="228" name="TXT_SUB_EEV">
       <Position>40</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="478" parent="228" name="TXT_SC_EEV">
+    <column id="523" parent="228" name="TXT_SC_EEV">
       <Position>41</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="479" parent="228" name="TXT_DVI_EEV">
+    <column id="524" parent="228" name="TXT_DVI_EEV">
       <Position>42</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="480" parent="228" name="TXT_VI_EEV1">
+    <column id="525" parent="228" name="TXT_VI_EEV1">
       <Position>43</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="481" parent="228" name="TXT_VI_EEV2">
+    <column id="526" parent="228" name="TXT_VI_EEV2">
       <Position>44</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="482" parent="228" name="TXT_AIR_TEMP">
+    <column id="527" parent="228" name="TXT_AIR_TEMP">
       <Position>45</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="483" parent="228" name="TXT_SUCTION_TEMP">
+    <column id="528" parent="228" name="TXT_SUCTION_TEMP">
       <Position>46</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="484" parent="228" name="TXT_CONDENSING_TEMP">
+    <column id="529" parent="228" name="TXT_CONDENSING_TEMP">
       <Position>47</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="485" parent="228" name="TXT_EVAPORATING_TEMP">
+    <column id="530" parent="228" name="TXT_EVAPORATING_TEMP">
       <Position>48</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="486" parent="228" name="TXT_INV1_DISCHARGE_TEMP">
+    <column id="531" parent="228" name="TXT_INV1_DISCHARGE_TEMP">
       <Position>49</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="487" parent="228" name="TXT_INV2_DISCHARGE_TEMP">
+    <column id="532" parent="228" name="TXT_INV2_DISCHARGE_TEMP">
       <Position>50</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="488" parent="228" name="TXT_HEAT_EXCHANGER_TEMP">
+    <column id="533" parent="228" name="TXT_HEAT_EXCHANGER_TEMP">
       <Position>51</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="489" parent="228" name="TXT_HEAT_EXCHANGER_UP_TEMP">
+    <column id="534" parent="228" name="TXT_HEAT_EXCHANGER_UP_TEMP">
       <Position>52</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="490" parent="228" name="TXT_HEAT_EXCHANGER_DOWN_TEMP">
+    <column id="535" parent="228" name="TXT_HEAT_EXCHANGER_DOWN_TEMP">
       <Position>53</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="491" parent="228" name="TXT_SC_PIPE_IN_TEMP">
+    <column id="536" parent="228" name="TXT_SC_PIPE_IN_TEMP">
       <Position>54</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="492" parent="228" name="TXT_SC_PIPE_OUT_TEMP">
+    <column id="537" parent="228" name="TXT_SC_PIPE_OUT_TEMP">
       <Position>55</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="493" parent="228" name="TXT_SC_PIPE_LIQUID_PIPE_TEMP">
+    <column id="538" parent="228" name="TXT_SC_PIPE_LIQUID_PIPE_TEMP">
       <Position>56</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="494" parent="228" name="TXT_DVI_IN_TEMP">
+    <column id="539" parent="228" name="TXT_DVI_IN_TEMP">
       <Position>57</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="495" parent="228" name="TXT_DVI_OUT_TEMP">
+    <column id="540" parent="228" name="TXT_DVI_OUT_TEMP">
       <Position>58</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="496" parent="228" name="TXT_INV1_IPM_TEMP">
+    <column id="541" parent="228" name="TXT_INV1_IPM_TEMP">
       <Position>59</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="497" parent="228" name="TXT_INV2_IPM_TEMP">
+    <column id="542" parent="228" name="TXT_INV2_IPM_TEMP">
       <Position>60</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="498" parent="228" name="TXT_FAN_HEATSINK_TEMP">
+    <column id="543" parent="228" name="TXT_FAN_HEATSINK_TEMP">
       <Position>61</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="499" parent="228" name="TXT_FAN2_HEATSINK_TEMP">
+    <column id="544" parent="228" name="TXT_FAN2_HEATSINK_TEMP">
       <Position>62</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="500" parent="228" name="TXT_OUT_HUMIDITY">
+    <column id="545" parent="228" name="TXT_OUT_HUMIDITY">
       <Position>63</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="501" parent="228" name="TXT_NOISE_LEVEL">
+    <column id="546" parent="228" name="TXT_NOISE_LEVEL">
       <Position>64</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="502" parent="228" name="TXT_INV1_INPUT_Current">
+    <column id="547" parent="228" name="TXT_INV1_INPUT_Current">
       <Position>65</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="503" parent="228" name="TXT_INV2_INPUT_Current">
+    <column id="548" parent="228" name="TXT_INV2_INPUT_Current">
       <Position>66</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="504" parent="228" name="TXT_INV1_INPUT_VOLTAGE">
+    <column id="549" parent="228" name="TXT_INV1_INPUT_VOLTAGE">
       <Position>67</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="505" parent="228" name="TXT_INV2_INPUT_VOLTAGE">
+    <column id="550" parent="228" name="TXT_INV2_INPUT_VOLTAGE">
       <Position>68</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="506" parent="228" name="TXT_INV1_FREQUENCY_INPUT_VOLTAGE">
+    <column id="551" parent="228" name="TXT_INV1_FREQUENCY_INPUT_VOLTAGE">
       <Position>69</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="507" parent="228" name="TXT_INV2_FREQUENCY_INPUT_VOLTAGE">
+    <column id="552" parent="228" name="TXT_INV2_FREQUENCY_INPUT_VOLTAGE">
       <Position>70</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="508" parent="228" name="TXT_INV1_UP_CURRENT">
+    <column id="553" parent="228" name="TXT_INV1_UP_CURRENT">
       <Position>71</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="509" parent="228" name="TXT_INV2_UP_CURRENT">
+    <column id="554" parent="228" name="TXT_INV2_UP_CURRENT">
       <Position>72</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="510" parent="228" name="TXT_FAN1_UP_CURRENT">
+    <column id="555" parent="228" name="TXT_FAN1_UP_CURRENT">
       <Position>73</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="511" parent="228" name="TXT_FAN2_UP_CURRENT">
+    <column id="556" parent="228" name="TXT_FAN2_UP_CURRENT">
       <Position>74</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="512" parent="228" name="TXT_FAN_DC_LINK_VOLTAGE">
+    <column id="557" parent="228" name="TXT_FAN_DC_LINK_VOLTAGE">
       <Position>75</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="513" parent="228" name="TXT_INV1_DC_LINK_VOLTAGE">
+    <column id="558" parent="228" name="TXT_INV1_DC_LINK_VOLTAGE">
       <Position>76</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="514" parent="228" name="TXT_INV2_DC_LINK_VOLTAGE">
+    <column id="559" parent="228" name="TXT_INV2_DC_LINK_VOLTAGE">
       <Position>77</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="515" parent="228" name="TXT_INSTANT_POWER_CONSUMPTION">
+    <column id="560" parent="228" name="TXT_INSTANT_POWER_CONSUMPTION">
       <Position>78</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="516" parent="228" name="TXT_ACCRUE_POWER_CONSUMPTION">
+    <column id="561" parent="228" name="TXT_ACCRUE_POWER_CONSUMPTION">
       <Position>79</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="517" parent="228" name="TXT_INFO_DRIVING_MODE">
+    <column id="562" parent="228" name="TXT_INFO_DRIVING_MODE">
       <Position>80</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="518" parent="228" name="TXT_INFO_ERROR_NUMBER">
+    <column id="563" parent="228" name="TXT_INFO_ERROR_NUMBER">
       <Position>81</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="519" parent="228" name="TXT_INFO_ERROR_UNIT">
+    <column id="564" parent="228" name="TXT_INFO_ERROR_UNIT">
       <Position>82</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="520" parent="228" name="TXT_INFO_PRODUCT_TYPE">
+    <column id="565" parent="228" name="TXT_INFO_PRODUCT_TYPE">
       <Position>83</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="521" parent="228" name="TXT_INFO_VERSION">
+    <column id="566" parent="228" name="TXT_INFO_VERSION">
       <Position>84</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="522" parent="228" name="TXT_INFO_EXT_VERSION">
+    <column id="567" parent="228" name="TXT_INFO_EXT_VERSION">
       <Position>85</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="523" parent="228" name="TXT_INFO_EEPROM">
+    <column id="568" parent="228" name="TXT_INFO_EEPROM">
       <Position>86</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="524" parent="228" name="TXT_INFO_COMP_VERSION">
+    <column id="569" parent="228" name="TXT_INFO_COMP_VERSION">
       <Position>87</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="525" parent="228" name="TXT_INFO_FAN_VERSION">
+    <column id="570" parent="228" name="TXT_INFO_FAN_VERSION">
       <Position>88</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="526" parent="228" name="TXT_INFO_DISTRIBUTOR">
+    <column id="571" parent="228" name="TXT_INFO_DISTRIBUTOR">
       <Position>89</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="527" parent="228" name="TXT_INFO_INSTALLER">
+    <column id="572" parent="228" name="TXT_INFO_INSTALLER">
       <Position>90</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="528" parent="228" name="TXT_INFO_SITENAME">
+    <column id="573" parent="228" name="TXT_INFO_SITENAME">
       <Position>91</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="529" parent="228" name="TXT_INFO_MODEL_INFO">
+    <column id="574" parent="228" name="TXT_INFO_MODEL_INFO">
       <Position>92</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="530" parent="228" name="TXT_OVERLOAD">
+    <column id="575" parent="228" name="TXT_OVERLOAD">
       <Position>93</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="531" parent="228" name="TXT_LIMIT_CT">
+    <column id="576" parent="228" name="TXT_LIMIT_CT">
       <Position>94</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="532" parent="228" name="TXT_LIMIT_TEMP">
+    <column id="577" parent="228" name="TXT_LIMIT_TEMP">
       <Position>95</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="533" parent="228" name="TXT_LIMIT_VT">
+    <column id="578" parent="228" name="TXT_LIMIT_VT">
       <Position>96</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="534" parent="228" name="TXT_INFO_LGMV_VERSION">
+    <column id="579" parent="228" name="TXT_INFO_LGMV_VERSION">
       <Position>97</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="535" parent="228" name="PRIMARY">
+    <key id="580" parent="228" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>odu_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="536" parent="229" name="sidu_awhp_uid">
+    <column id="581" parent="229" name="sidu_awhp_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="537" parent="229" name="header_uid">
+    <column id="582" parent="229" name="header_uid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="538" parent="229" name="section_count">
+    <column id="583" parent="229" name="section_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="539" parent="229" name="TXT_TIME">
+    <column id="584" parent="229" name="TXT_TIME">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="540" parent="229" name="TXT_SIDU_NUMBER">
+    <column id="585" parent="229" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="541" parent="229" name="PRIMARY">
+    <key id="586" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_awhp_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="542" parent="230" name="sidu_casecade_uid">
+    <column id="587" parent="230" name="sidu_casecade_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="543" parent="230" name="header_uid">
+    <column id="588" parent="230" name="header_uid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="544" parent="230" name="section_count">
+    <column id="589" parent="230" name="section_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="545" parent="230" name="TXT_TIME">
+    <column id="590" parent="230" name="TXT_TIME">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="546" parent="230" name="TXT_SIDU_NUMBER">
+    <column id="591" parent="230" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="547" parent="230" name="TXT_SIDU_TEMP_CHOICE">
+    <column id="592" parent="230" name="TXT_SIDU_TEMP_CHOICE">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="548" parent="230" name="TXT_SIDU_AIR_OUT_TEMP_TARGETTING">
+    <column id="593" parent="230" name="TXT_SIDU_AIR_OUT_TEMP_TARGETTING">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="549" parent="230" name="TXT_SIDU_HEAT_WATER_ACTIVE">
+    <column id="594" parent="230" name="TXT_SIDU_HEAT_WATER_ACTIVE">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="550" parent="230" name="TXT_SIDU_HEAT_WATER_TEMP_TARGETTING">
+    <column id="595" parent="230" name="TXT_SIDU_HEAT_WATER_TEMP_TARGETTING">
       <Position>9</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="551" parent="230" name="TXT_SIDU_WATER_PUMP">
+    <column id="596" parent="230" name="TXT_SIDU_WATER_PUMP">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="552" parent="230" name="TXT_SIDU_HEATER_WATER_MODE">
+    <column id="597" parent="230" name="TXT_SIDU_HEATER_WATER_MODE">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="553" parent="230" name="TXT_SIDU_HEAT_WATER_TEMP">
+    <column id="598" parent="230" name="TXT_SIDU_HEAT_WATER_TEMP">
       <Position>12</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="554" parent="230" name="TXT_SIDU_WATER_IN_TEMP">
+    <column id="599" parent="230" name="TXT_SIDU_WATER_IN_TEMP">
       <Position>13</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="555" parent="230" name="TXT_SIDU_WATER_OUT_TEMP">
+    <column id="600" parent="230" name="TXT_SIDU_WATER_OUT_TEMP">
       <Position>14</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="556" parent="230" name="TXT_SIDU_TEMP_GAP">
+    <column id="601" parent="230" name="TXT_SIDU_TEMP_GAP">
       <Position>15</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="557" parent="230" name="TXT_SIDU_CASECADE_ERROR">
+    <column id="602" parent="230" name="TXT_SIDU_CASECADE_ERROR">
       <Position>16</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="558" parent="230" name="TXT_SIDU_HEATER">
+    <column id="603" parent="230" name="TXT_SIDU_HEATER">
       <Position>17</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="559" parent="230" name="TXT_SIDU_HEAT_SHINK_TEMP">
+    <column id="604" parent="230" name="TXT_SIDU_HEAT_SHINK_TEMP">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="560" parent="230" name="TXT_SIDU_CASECADE_HIGH_PRESSURE">
+    <column id="605" parent="230" name="TXT_SIDU_CASECADE_HIGH_PRESSURE">
       <Position>19</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="561" parent="230" name="TXT_SIDU_CASECADE_LOW_PRESSURE">
+    <column id="606" parent="230" name="TXT_SIDU_CASECADE_LOW_PRESSURE">
       <Position>20</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="562" parent="230" name="TXT_SIDU_DISCHARGE_TEMP">
+    <column id="607" parent="230" name="TXT_SIDU_DISCHARGE_TEMP">
       <Position>21</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="563" parent="230" name="TXT_SIDU_CASECADE_INPUT_CURRENT">
+    <column id="608" parent="230" name="TXT_SIDU_CASECADE_INPUT_CURRENT">
       <Position>22</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="564" parent="230" name="TXT_COMP1_UP_VOLTAGE">
+    <column id="609" parent="230" name="TXT_COMP1_UP_VOLTAGE">
       <Position>23</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="565" parent="230" name="TXT_COMP1_UP_CURRENT">
+    <column id="610" parent="230" name="TXT_COMP1_UP_CURRENT">
       <Position>24</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="566" parent="230" name="TXT_COMP1_TARGETTING">
+    <column id="611" parent="230" name="TXT_COMP1_TARGETTING">
       <Position>25</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="567" parent="230" name="TXT_COMP1_TRACE">
+    <column id="612" parent="230" name="TXT_COMP1_TRACE">
       <Position>26</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="568" parent="230" name="TXT_SIDU_CASECADE_EEV">
+    <column id="613" parent="230" name="TXT_SIDU_CASECADE_EEV">
       <Position>27</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="569" parent="230" name="TXT_4WAY">
+    <column id="614" parent="230" name="TXT_4WAY">
       <Position>28</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="570" parent="230" name="TXT_HOTGAS">
+    <column id="615" parent="230" name="TXT_HOTGAS">
       <Position>29</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="571" parent="230" name="TXT_SIDU_FAN_HEATSINK">
+    <column id="616" parent="230" name="TXT_SIDU_FAN_HEATSINK">
       <Position>30</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="572" parent="230" name="TXT_SUMP_HEATER">
+    <column id="617" parent="230" name="TXT_SUMP_HEATER">
       <Position>31</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="573" parent="230" name="TXT_SIDU_FCU">
+    <column id="618" parent="230" name="TXT_SIDU_FCU">
       <Position>32</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="574" parent="230" name="TXT_SIDU_FLOW_SW">
+    <column id="619" parent="230" name="TXT_SIDU_FLOW_SW">
       <Position>33</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="575" parent="230" name="TXT_SIDU_SUCTION_TEMP">
+    <column id="620" parent="230" name="TXT_SIDU_SUCTION_TEMP">
       <Position>34</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="576" parent="230" name="TXT_HOT_WATER_STORAGE_TANK_HEATER">
+    <column id="621" parent="230" name="TXT_HOT_WATER_STORAGE_TANK_HEATER">
       <Position>35</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="577" parent="230" name="PRIMARY">
+    <key id="622" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_casecade_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="578" parent="231" name="sidu_dxc_uid">
+    <column id="623" parent="231" name="sidu_dxc_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="579" parent="231" name="header_uid">
+    <column id="624" parent="231" name="header_uid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="580" parent="231" name="section_count">
+    <column id="625" parent="231" name="section_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="581" parent="231" name="TXT_TIME">
+    <column id="626" parent="231" name="TXT_TIME">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="582" parent="231" name="TXT_SIDU_NUMBER">
+    <column id="627" parent="231" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="583" parent="231" name="TXT_SIDU_OA_TEMP">
+    <column id="628" parent="231" name="TXT_SIDU_OA_TEMP">
       <Position>6</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="584" parent="231" name="TXT_SIDU_RA_TEMP">
+    <column id="629" parent="231" name="TXT_SIDU_RA_TEMP">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="585" parent="231" name="TXT_SIDU_DXC_AIRCON">
+    <column id="630" parent="231" name="TXT_SIDU_DXC_AIRCON">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="586" parent="231" name="TXT_SIDU_DXC_VENT">
+    <column id="631" parent="231" name="TXT_SIDU_DXC_VENT">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="587" parent="231" name="PRIMARY">
+    <key id="632" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_dxc_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="588" parent="232" name="sidu_fau_uid">
+    <column id="633" parent="232" name="sidu_fau_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="589" parent="232" name="header_uid">
+    <column id="634" parent="232" name="header_uid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="590" parent="232" name="section_count">
+    <column id="635" parent="232" name="section_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="591" parent="232" name="TXT_TIME">
+    <column id="636" parent="232" name="TXT_TIME">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="592" parent="232" name="TXT_SIDU_NUMBER">
+    <column id="637" parent="232" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="593" parent="232" name="TXT_SIDU_SUCTION_TEMP">
+    <column id="638" parent="232" name="TXT_SIDU_SUCTION_TEMP">
       <Position>6</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="594" parent="232" name="PRIMARY">
+    <key id="639" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_fau_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="595" parent="233" name="sidu_showcase_uid">
+    <column id="640" parent="233" name="sidu_showcase_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="596" parent="233" name="TXT_TIME">
+    <column id="641" parent="233" name="TXT_TIME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="597" parent="233" name="header_uid">
+    <column id="642" parent="233" name="header_uid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="598" parent="233" name="section_count">
+    <column id="643" parent="233" name="section_count">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="599" parent="233" name="TXT_SIDU_NUMBER">
+    <column id="644" parent="233" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="600" parent="233" name="TXT_SIDU_SHOWCASE_TYPE">
+    <column id="645" parent="233" name="TXT_SIDU_SHOWCASE_TYPE">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="601" parent="233" name="TXT_SIDU_SHOWCASE_OPER_STATE">
+    <column id="646" parent="233" name="TXT_SIDU_SHOWCASE_OPER_STATE">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="602" parent="233" name="TXT_SIDU_SHOWCASE_OPER_DEFROST">
+    <column id="647" parent="233" name="TXT_SIDU_SHOWCASE_OPER_DEFROST">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="603" parent="233" name="TXT_SIDU_SHOWCASE_OPER_REFRIGERATION">
+    <column id="648" parent="233" name="TXT_SIDU_SHOWCASE_OPER_REFRIGERATION">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="604" parent="233" name="TXT_SIDU_SHOWCASE_TROUBLE_DEFROSTING">
+    <column id="649" parent="233" name="TXT_SIDU_SHOWCASE_TROUBLE_DEFROSTING">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="605" parent="233" name="TXT_IDU_CENTRAL_CONTROL_ADDRESS">
+    <column id="650" parent="233" name="TXT_IDU_CENTRAL_CONTROL_ADDRESS">
       <Position>11</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="606" parent="233" name="TXT_AIR_TEMP">
+    <column id="651" parent="233" name="TXT_AIR_TEMP">
       <Position>12</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="607" parent="233" name="TXT_SIDU_SHOWCASE_DEFROST_TEMP">
+    <column id="652" parent="233" name="TXT_SIDU_SHOWCASE_DEFROST_TEMP">
       <Position>13</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="608" parent="233" name="TXT_IDU_PIPE_IN_TEMP">
+    <column id="653" parent="233" name="TXT_IDU_PIPE_IN_TEMP">
       <Position>14</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="609" parent="233" name="TXT_IDU_PIPE_OUT_TEMP">
+    <column id="654" parent="233" name="TXT_IDU_PIPE_OUT_TEMP">
       <Position>15</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="610" parent="233" name="TXT_SIDU_CASECADE_EEV">
+    <column id="655" parent="233" name="TXT_SIDU_CASECADE_EEV">
       <Position>16</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="611" parent="233" name="TXT_SIDU_CASECADE_ERROR">
+    <column id="656" parent="233" name="TXT_SIDU_CASECADE_ERROR">
       <Position>17</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="612" parent="233" name="TXT_SIDU_SHOWCASE_TARGET_TEMP">
+    <column id="657" parent="233" name="TXT_SIDU_SHOWCASE_TARGET_TEMP">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="613" parent="233" name="TXT_SIDU_SHOWCASE_THERMO_GAP_TEMP">
+    <column id="658" parent="233" name="TXT_SIDU_SHOWCASE_THERMO_GAP_TEMP">
       <Position>19</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="614" parent="233" name="TXT_SH_TARGETTING">
+    <column id="659" parent="233" name="TXT_SH_TARGETTING">
       <Position>20</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="615" parent="233" name="PRIMARY">
+    <key id="660" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_showcase_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="616" parent="234" name="sidu_whu_uid">
+    <column id="661" parent="234" name="sidu_whu_uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="617" parent="234" name="header_uid">
+    <column id="662" parent="234" name="header_uid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="618" parent="234" name="section_count">
+    <column id="663" parent="234" name="section_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="619" parent="234" name="TXT_TIME">
+    <column id="664" parent="234" name="TXT_TIME">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="620" parent="234" name="TXT_SIDU_NUMBER">
+    <column id="665" parent="234" name="TXT_SIDU_NUMBER">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="621" parent="234" name="TXT_SIDU_TEMP_CHOICE">
+    <column id="666" parent="234" name="TXT_SIDU_TEMP_CHOICE">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="622" parent="234" name="TXT_SIDU_AIR_OUT_TEMP_TARGETTING">
+    <column id="667" parent="234" name="TXT_SIDU_AIR_OUT_TEMP_TARGETTING">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="623" parent="234" name="TXT_SIDU_HEAT_WATER_ACTIVE">
+    <column id="668" parent="234" name="TXT_SIDU_HEAT_WATER_ACTIVE">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="624" parent="234" name="TXT_SIDU_HEAT_WATER_TEMP_TARGETTING">
+    <column id="669" parent="234" name="TXT_SIDU_HEAT_WATER_TEMP_TARGETTING">
       <Position>9</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="625" parent="234" name="TXT_SIDU_WATER_PUMP">
+    <column id="670" parent="234" name="TXT_SIDU_WATER_PUMP">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="626" parent="234" name="TXT_SIDU_HEATER_WATER_MODE">
+    <column id="671" parent="234" name="TXT_SIDU_HEATER_WATER_MODE">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="627" parent="234" name="TXT_SIDU_HEAT_WATER_TEMP">
+    <column id="672" parent="234" name="TXT_SIDU_HEAT_WATER_TEMP">
       <Position>12</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="628" parent="234" name="TXT_SIDU_WATER_IN_TEMP">
+    <column id="673" parent="234" name="TXT_SIDU_WATER_IN_TEMP">
       <Position>13</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="629" parent="234" name="TXT_SIDU_WATER_OUT_TEMP">
+    <column id="674" parent="234" name="TXT_SIDU_WATER_OUT_TEMP">
       <Position>14</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="630" parent="234" name="TXT_SIDU_TEMP_GAP_TGT">
+    <column id="675" parent="234" name="TXT_SIDU_TEMP_GAP_TGT">
       <Position>15</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="631" parent="234" name="TXT_SIDU_TEMP_GAP">
+    <column id="676" parent="234" name="TXT_SIDU_TEMP_GAP">
       <Position>16</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="632" parent="234" name="TXT_SIDU_HEATER">
+    <column id="677" parent="234" name="TXT_SIDU_HEATER">
       <Position>17</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="633" parent="234" name="TXT_SIDU_HEATER_OUT_TEMP">
+    <column id="678" parent="234" name="TXT_SIDU_HEATER_OUT_TEMP">
       <Position>18</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="634" parent="234" name="TXT_SIDU_RELAY1">
+    <column id="679" parent="234" name="TXT_SIDU_RELAY1">
       <Position>19</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="635" parent="234" name="TXT_SIDU_RELAY2">
+    <column id="680" parent="234" name="TXT_SIDU_RELAY2">
       <Position>20</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="636" parent="234" name="PRIMARY">
+    <key id="681" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sidu_whu_uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="637" parent="235" name="userUid">
+    <column id="682" parent="235" name="userUid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="638" parent="235" name="id">
+    <column id="683" parent="235" name="id">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="639" parent="235" name="pwd">
+    <column id="684" parent="235" name="pwd">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="640" parent="235" name="PRIMARY">
+    <key id="685" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userUid</ColNames>
       <Primary>1</Primary>

@@ -156,7 +156,13 @@ module.exports = (Sequelize, sequelize) => {
             },
             conn_od_wb_gap: {
                 type: Sequelize.DOUBLE
-            }
+            },
+            conn_file_date: {
+                type: Sequelize.STRING
+            },
+            conn_file_time: {
+                type: Sequelize.STRING
+            },
         }, {
             freezeTableName: true,
             timestamps: false
