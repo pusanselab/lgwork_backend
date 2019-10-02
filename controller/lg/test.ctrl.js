@@ -38,15 +38,19 @@ const redundancy_check = (req, res) => {
     const conn_testroom_number = req.body.conn_testroom_number;
     const test_step2 = req.body.test_step2;
 
+    console.log(req.body)
+
     const header_uid = req.body.header_uid;
 
     const result = {
         content : {
-            cooling_performance : {},
+            raw : {
+
+            },
             header : {}
         },
         header :{},
-        cooling_performance : {}
+        raw : {}
     };
 
     db.Header.findAll({
@@ -61,7 +65,7 @@ const redundancy_check = (req, res) => {
             test_step2: test_step2
         }
     }).then( header => {
-        console.log("header 값 : ", header)
+        // console.log("header 값 : ", header)
         if(header.length == 0 ){
             result.header.code = 400
             result.header.message = "failure"
@@ -70,7 +74,7 @@ const redundancy_check = (req, res) => {
             result.header.code = 200
             result.header.message = "success"
         }
-    }).then( db.Calolimeter.findAll({
+    }).then( db.Calorimeter.findAll({
         where : {
             header_uid: header_uid
         },
@@ -87,7 +91,7 @@ const redundancy_check = (req, res) => {
             const index = calorimeter[0].dataValues.TXT_TIME;
             const EER = calorimeter[0].dataValues.EER
 
-            result.content.cooling_performance.EER = EER
+            result.content.raw.EER = EER
 
             db.Odu.findOne({
                 where : {
@@ -103,12 +107,12 @@ const redundancy_check = (req, res) => {
                 const main_eev = odu.TXT_MAIN_EEV
                 const sub_eev = odu.TXT_SUB_EEV
 
-                result.content.cooling_performance.compressor_1 = compressor_1
-                result.content.cooling_performance.compressor_2 = compressor_2
-                result.content.cooling_performance.odu_fan_rpm1 = odu_fan_rpm1
-                result.content.cooling_performance.odu_fan_rpm2 = odu_fan_rpm2
-                result.content.cooling_performance.main_eev = main_eev
-                result.content.cooling_performance.sub_eev = sub_eev
+                result.content.raw.compressor_1 = compressor_1
+                result.content.raw.compressor_2 = compressor_2
+                result.content.raw.odu_fan_rpm1 = odu_fan_rpm1
+                result.content.raw.odu_fan_rpm2 = odu_fan_rpm2
+                result.content.raw.main_eev = main_eev
+                result.content.raw.sub_eev = sub_eev
 
                 db.Idu.findOne({
                     where : {
@@ -119,9 +123,9 @@ const redundancy_check = (req, res) => {
                 }).then( idu => {
                     const idu1_fan_rpm = idu.TXT_IDU_WIND
 
-                    result.content.cooling_performance.idu1_fan_rpm = idu1_fan_rpm
-                    result.cooling_performance.code = 200
-                    result.cooling_performance.message = "success"
+                    result.content.raw.idu1_fan_rpm = idu1_fan_rpm
+                    result.raw.code = 200
+                    result.raw.message = "success"
                     return res.json(result)
 
                 })
@@ -406,7 +410,7 @@ const overview = (req, res) => {
 
 const data_search_id = (req, res) => {
     const uid = req.body.header_uid;
-    console.log(req.body)
+
     const result = {};
 
     db.Header.findOne({
@@ -495,6 +499,7 @@ const data_search = (req, res) => {
         where : query
     }).then( header => {
         if(header.length == 0){
+            console.log("왜 일로들오노?")
             result.code = 400
             result.message = "failure"
             return res.json(result)
@@ -554,9 +559,9 @@ const data_search_detail = (req, res) => {
             header_uid: header_uid
         },
         order:[
-         ['EER', 'DESC']
+            ['EER', 'DESC']
         ]
-       //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
+        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
     }).then( calorimeter => {
         if(calorimeter.length == 0 ){
             result.cooling_performance.code = 400
