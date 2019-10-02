@@ -571,7 +571,7 @@ const data_search_detail = (req, res) => {
             db.Odu.findOne({
                 where : {
                     header_uid : header_uid,
-                    TXT_TIME : index
+                    // TXT_TIME : index
                 },
                 attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
             }).then( odu => {
@@ -621,7 +621,7 @@ const graph_odu = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -650,7 +650,7 @@ const graph_idu = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -679,7 +679,7 @@ const graph_hru = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -706,7 +706,7 @@ const graph_calolimeter = (req, res) => {
         where : {
             header_uid: header_uid,
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -735,7 +735,7 @@ const graph_sidu_awhp = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -764,7 +764,7 @@ const graph_sidu_casecade = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -793,7 +793,7 @@ const graph_sidu_dxc = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -822,7 +822,7 @@ const graph_sidu_fau = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -851,7 +851,7 @@ const graph_sidu_showcase = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -880,7 +880,7 @@ const graph_sidu_whu = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
