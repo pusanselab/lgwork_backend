@@ -571,7 +571,7 @@ const data_search_detail = (req, res) => {
             db.Odu.findOne({
                 where : {
                     header_uid : header_uid,
-                    TXT_TIME : index
+                    // TXT_TIME : index
                 },
                 attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
             }).then( odu => {
@@ -621,7 +621,7 @@ const graph_odu = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -650,7 +650,7 @@ const graph_idu = (req, res) => {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [column_name, "TXT_TIME"]
+        attributes : [[column_name, "value"], "TXT_TIME"]
     }).then( send_data => {
         if(send_data.length == null){
             result.code = 400
@@ -667,7 +667,239 @@ const graph_idu = (req, res) => {
     })
 }
 
+const graph_hru = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Hru.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_calolimeter = (req, res) => {
+    const header_uid = req.body.header_uid
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Calolimeter.findAll({
+        where : {
+            header_uid: header_uid,
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_awhp = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_awhp.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_casecade = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_cascade.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_dxc = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_dxc.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_fau = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_fau.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_showcase = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_showcase.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+const graph_sidu_whu = (req, res) => {
+    const header_uid = req.body.header_uid
+    const section_count = req.body.section_count
+    const column_name = req.body.column_name
+
+    const result = {}
+
+    db.Sidu_whu.findAll({
+        where : {
+            header_uid: header_uid,
+            section_count: section_count
+        },
+        attributes : [[column_name, "value"], "TXT_TIME"]
+    }).then( send_data => {
+        if(send_data.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(send_data)
+            result.content = send_data
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+}
+
+
 module.exports = {
     test, redundancy_check, login, overview,  data_search, data_search_id, data_search_detail,
-    graph_odu, graph_idu
+    graph_odu, graph_idu, graph_hru, graph_calolimeter, graph_sidu_awhp, graph_sidu_casecade,
+    graph_sidu_dxc, graph_sidu_fau, graph_sidu_showcase, graph_sidu_whu
 }
