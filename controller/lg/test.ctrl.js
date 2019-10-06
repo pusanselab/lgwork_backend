@@ -40,17 +40,14 @@ const redundancy_check = (req, res) => {
 
     console.log(req.body)
 
-    const header_uid = req.body.header_uid;
-
     const result = {
         content : {
-            raw : {
-
-            },
-            header : {}
-        },
-        header :{},
-        raw : {}
+                header_uid : 0,
+                raw : {},
+                header : {}
+                },
+        raw : {},
+        header :{}
     };
 
     db.Header.findAll({
@@ -63,7 +60,16 @@ const redundancy_check = (req, res) => {
             conn_operation_rate: conn_operation_rate,
             conn_testroom_number: conn_testroom_number,
             test_step2: test_step2
-        }
+        },
+        include:[
+            {
+                model : db.Calorimeter,
+                // order:[
+                //     ['EER', 'DESC']
+                // ],
+                attributes: [sequelize.fn('MAX', 'EER')]
+            }
+        ]
     }).then( header => {
         // console.log("header 값 : ", header)
         if(header.length == 0 ){
@@ -73,65 +79,83 @@ const redundancy_check = (req, res) => {
             result.content.header = header
             result.header.code = 200
             result.header.message = "success"
-        }
-    }).then( db.Calorimeter.findAll({
-        where : {
-            header_uid: header_uid
-        },
-        order:[
-            ['EER', 'DESC']
-        ]
-        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
-    }).then( calorimeter => {
-        if(calorimeter.length == 0 ){
-            result.cooling_performance.code = 400
-            result.cooling_performance.message = "failure"
+
+            // for( var i = 0 ; i < header.length ; i++){
+            //     console.log(i, "번째 데이터", header[i].dataValues)
+            //     result.content[i].header_uid = header[i].dataValues.header_uid
+            //
+            //     var header_uid = result.content[i].header_uid
+            //
+            //     console.log("header_uid : ", header_uid)
+            //
+            //     db.Calorimeter.findAll({
+            //         where : {
+            //             header_uid: header_uid
+            //         },
+            //         order:[
+            //             ['EER', 'DESC']
+            //         ]
+            //         //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
+            //     }).then( calorimeter => {
+            //         if(calorimeter.length == 0 ){
+            //             result.raw.code = 400
+            //             result.raw.message = "failure"
+            //             return res.json(result)
+            //         }else{
+            //             const index = calorimeter[0].dataValues.TXT_TIME
+            //             const EER = calorimeter[0].dataValues.EER
+            //
+            //             result.content[i].header = header[i]
+            //             result.content[i].raw.EER = EER
+            //
+            //             console.log("content[i].header  : 위에 헤더")
+            //             console.log("content[i].raw.EER : ", EER)
+            //
+            //
+            //             db.Odu.findOne({
+            //                 where : {
+            //                     header_uid : header_uid,
+            //                     TXT_TIME : index
+            //                 },
+            //                 attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
+            //             }).then( odu => {
+            //                 const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
+            //                 const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
+            //                 const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
+            //                 const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
+            //                 const main_eev = odu.TXT_MAIN_EEV
+            //                 const sub_eev = odu.TXT_SUB_EEV
+            //
+            //                 result.content[i].raw.compressor_1 = compressor_1
+            //                 result.content[i].raw.compressor_2 = compressor_2
+            //                 result.content[i].raw.odu_fan_rpm1 = odu_fan_rpm1
+            //                 result.content[i].raw.odu_fan_rpm2 = odu_fan_rpm2
+            //                 result.content[i].raw.main_eev = main_eev
+            //                 result.content[i].raw.sub_eev = sub_eev
+            //
+            //                 db.Idu.findOne({
+            //                     where : {
+            //                             header_uid : header_uid,
+            //                         TXT_TIME : index
+            //                     },
+            //                     attributes : ["TXT_IDU_WIND"]
+            //                 }).then( idu => {
+            //                     const idu1_fan_rpm = idu.TXT_IDU_WIND
+            //
+            //                     result.content[i].raw.idu1_fan_rpm = idu1_fan_rpm
+            //                     result.raw.code = 200
+            //                     result.raw.message = "success"
+            //
+            //                 })
+            //             })
+            //         }
+            //     })
+            // }
+
+
             return res.json(result)
-        }else{
-            const index = calorimeter[0].dataValues.TXT_TIME;
-            const EER = calorimeter[0].dataValues.EER
-
-            result.content.raw.EER = EER
-
-            db.Odu.findOne({
-                where : {
-                    header_uid : header_uid,
-                    TXT_TIME : index
-                },
-                attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
-            }).then( odu => {
-                const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
-                const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
-                const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
-                const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
-                const main_eev = odu.TXT_MAIN_EEV
-                const sub_eev = odu.TXT_SUB_EEV
-
-                result.content.raw.compressor_1 = compressor_1
-                result.content.raw.compressor_2 = compressor_2
-                result.content.raw.odu_fan_rpm1 = odu_fan_rpm1
-                result.content.raw.odu_fan_rpm2 = odu_fan_rpm2
-                result.content.raw.main_eev = main_eev
-                result.content.raw.sub_eev = sub_eev
-
-                db.Idu.findOne({
-                    where : {
-                        header_uid : header_uid,
-                        TXT_TIME : index
-                    },
-                    attributes : ["TXT_IDU_WIND"]
-                }).then( idu => {
-                    const idu1_fan_rpm = idu.TXT_IDU_WIND
-
-                    result.content.raw.idu1_fan_rpm = idu1_fan_rpm
-                    result.raw.code = 200
-                    result.raw.message = "success"
-                    return res.json(result)
-
-                })
-            })
         }
-    }))
+    })
 }
 
 const login = (req, res) => {
