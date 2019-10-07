@@ -64,12 +64,18 @@ const redundancy_check = (req, res) => {
         include:[
             {
                 model : db.Calorimeter,
-                // order:[
-                //     ['EER', 'DESC']
-                // ],
-                attributes: [sequelize.fn('MAX', 'EER')]
+                attributes: ['EER']
             }
-        ]
+        ],
+        order:[
+            [
+                {
+                    model : db.Calorimeter,
+                    attributes: ['EER']
+                },
+                'EER', 'DESC'
+            ]
+        ],
     }).then( header => {
         // console.log("header 값 : ", header)
         if(header.length == 0 ){
@@ -442,17 +448,28 @@ const data_search_id = (req, res) => {
             header_uid: uid
         }
     }).then( header => {
-        if(header == null){
-            result.code = 400
-            result.message = "failure"
-            return res.json(result)
-        }else{
-            console.log(header.dataValues)
-            result.content = header.dataValues
-            result.code = 200
-            result.message = "success"
-            return res.json(result)
-        }
+        db.Calorimeter.findOne({
+            where: {
+                header_uid: uid
+            },
+            attributes: [
+                [sequelize.fn('count', sequelize.col('calorimeter_uid')), 'count']
+            ],
+        }).then(Calorimeter =>{
+            if(header == null){
+                result.code = 400
+                result.message = "failure"
+                return res.json(result)
+            }else{
+                console.log(Calorimeter)
+                console.log(header.dataValues)
+                result.content = header.dataValues
+                result.count = Calorimeter.dataValues.count
+                result.code = 200
+                result.message = "success"
+                return res.json(result)
+            }
+        })
     })
 }
 
