@@ -42,10 +42,10 @@ const redundancy_check = (req, res) => {
 
     const result = {
         content : {
-                header_uid : 0,
-                raw : {},
-                header : {}
-                },
+            header_uid : 0,
+            raw : {},
+            header : {}
+        },
         raw : {},
         header :{}
     };
