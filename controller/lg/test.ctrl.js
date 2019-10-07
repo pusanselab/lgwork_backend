@@ -38,15 +38,16 @@ const redundancy_check = (req, res) => {
     const conn_testroom_number = req.body.conn_testroom_number;
     const test_step2 = req.body.test_step2;
 
-    const header_uid = req.body.header_uid;
+    console.log(req.body)
 
     const result = {
         content : {
-            cooling_performance : {},
-            header : {}
-        },
-        header :{},
-        cooling_performance : {}
+                header_uid : 0,
+                raw : {},
+                header : {}
+                },
+        raw : {},
+        header :{}
     };
 
     db.Header.findAll({
@@ -59,9 +60,18 @@ const redundancy_check = (req, res) => {
             conn_operation_rate: conn_operation_rate,
             conn_testroom_number: conn_testroom_number,
             test_step2: test_step2
-        }
+        },
+        include:[
+            {
+                model : db.Calorimeter,
+                // order:[
+                //     ['EER', 'DESC']
+                // ],
+                attributes: [sequelize.fn('MAX', 'EER')]
+            }
+        ]
     }).then( header => {
-        console.log("header 값 : ", header)
+        // console.log("header 값 : ", header)
         if(header.length == 0 ){
             result.header.code = 400
             result.header.message = "failure"
@@ -69,65 +79,83 @@ const redundancy_check = (req, res) => {
             result.content.header = header
             result.header.code = 200
             result.header.message = "success"
-        }
-    }).then( db.Calolimeter.findAll({
-        where : {
-            header_uid: header_uid
-        },
-        order:[
-            ['EER', 'DESC']
-        ]
-        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
-    }).then( calorimeter => {
-        if(calorimeter.length == 0 ){
-            result.cooling_performance.code = 400
-            result.cooling_performance.message = "failure"
+
+            // for( var i = 0 ; i < header.length ; i++){
+            //     console.log(i, "번째 데이터", header[i].dataValues)
+            //     result.content[i].header_uid = header[i].dataValues.header_uid
+            //
+            //     var header_uid = result.content[i].header_uid
+            //
+            //     console.log("header_uid : ", header_uid)
+            //
+            //     db.Calorimeter.findAll({
+            //         where : {
+            //             header_uid: header_uid
+            //         },
+            //         order:[
+            //             ['EER', 'DESC']
+            //         ]
+            //         //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
+            //     }).then( calorimeter => {
+            //         if(calorimeter.length == 0 ){
+            //             result.raw.code = 400
+            //             result.raw.message = "failure"
+            //             return res.json(result)
+            //         }else{
+            //             const index = calorimeter[0].dataValues.TXT_TIME
+            //             const EER = calorimeter[0].dataValues.EER
+            //
+            //             result.content[i].header = header[i]
+            //             result.content[i].raw.EER = EER
+            //
+            //             console.log("content[i].header  : 위에 헤더")
+            //             console.log("content[i].raw.EER : ", EER)
+            //
+            //
+            //             db.Odu.findOne({
+            //                 where : {
+            //                     header_uid : header_uid,
+            //                     TXT_TIME : index
+            //                 },
+            //                 attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
+            //             }).then( odu => {
+            //                 const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
+            //                 const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
+            //                 const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
+            //                 const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
+            //                 const main_eev = odu.TXT_MAIN_EEV
+            //                 const sub_eev = odu.TXT_SUB_EEV
+            //
+            //                 result.content[i].raw.compressor_1 = compressor_1
+            //                 result.content[i].raw.compressor_2 = compressor_2
+            //                 result.content[i].raw.odu_fan_rpm1 = odu_fan_rpm1
+            //                 result.content[i].raw.odu_fan_rpm2 = odu_fan_rpm2
+            //                 result.content[i].raw.main_eev = main_eev
+            //                 result.content[i].raw.sub_eev = sub_eev
+            //
+            //                 db.Idu.findOne({
+            //                     where : {
+            //                             header_uid : header_uid,
+            //                         TXT_TIME : index
+            //                     },
+            //                     attributes : ["TXT_IDU_WIND"]
+            //                 }).then( idu => {
+            //                     const idu1_fan_rpm = idu.TXT_IDU_WIND
+            //
+            //                     result.content[i].raw.idu1_fan_rpm = idu1_fan_rpm
+            //                     result.raw.code = 200
+            //                     result.raw.message = "success"
+            //
+            //                 })
+            //             })
+            //         }
+            //     })
+            // }
+
+
             return res.json(result)
-        }else{
-            const index = calorimeter[0].dataValues.TXT_TIME;
-            const EER = calorimeter[0].dataValues.EER
-
-            result.content.cooling_performance.EER = EER
-
-            db.Odu.findOne({
-                where : {
-                    header_uid : header_uid,
-                    TXT_TIME : index
-                },
-                attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
-            }).then( odu => {
-                const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
-                const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
-                const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
-                const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
-                const main_eev = odu.TXT_MAIN_EEV
-                const sub_eev = odu.TXT_SUB_EEV
-
-                result.content.cooling_performance.compressor_1 = compressor_1
-                result.content.cooling_performance.compressor_2 = compressor_2
-                result.content.cooling_performance.odu_fan_rpm1 = odu_fan_rpm1
-                result.content.cooling_performance.odu_fan_rpm2 = odu_fan_rpm2
-                result.content.cooling_performance.main_eev = main_eev
-                result.content.cooling_performance.sub_eev = sub_eev
-
-                db.Idu.findOne({
-                    where : {
-                        header_uid : header_uid,
-                        TXT_TIME : index
-                    },
-                    attributes : ["TXT_IDU_WIND"]
-                }).then( idu => {
-                    const idu1_fan_rpm = idu.TXT_IDU_WIND
-
-                    result.content.cooling_performance.idu1_fan_rpm = idu1_fan_rpm
-                    result.cooling_performance.code = 200
-                    result.cooling_performance.message = "success"
-                    return res.json(result)
-
-                })
-            })
         }
-    }))
+    })
 }
 
 const login = (req, res) => {
@@ -406,7 +434,7 @@ const overview = (req, res) => {
 
 const data_search_id = (req, res) => {
     const uid = req.body.header_uid;
-    console.log(req.body)
+
     const result = {};
 
     db.Header.findOne({
@@ -495,6 +523,7 @@ const data_search = (req, res) => {
         where : query
     }).then( header => {
         if(header.length == 0){
+            console.log("왜 일로들오노?")
             result.code = 400
             result.message = "failure"
             return res.json(result)
@@ -554,9 +583,9 @@ const data_search_detail = (req, res) => {
             header_uid: header_uid
         },
         order:[
-         ['EER', 'DESC']
+            ['EER', 'DESC']
         ]
-       //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
+        //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
     }).then( calorimeter => {
         if(calorimeter.length == 0 ){
             result.cooling_performance.code = 400
@@ -643,7 +672,11 @@ const graph_idu = (req, res) => {
     const section_count = req.body.section_count
     const column_name = req.body.column_name
 
-    const result = {}
+    const result = {
+        content:{
+            model : []
+        }
+    }
 
     db.Idu.findAll({
         where : {
@@ -658,7 +691,7 @@ const graph_idu = (req, res) => {
             return res.json(result)
         }else{
             console.log(send_data)
-            result.content = send_data
+            result.content.model = send_data
             result.code = 200
             result.message = "success"
             console.log(result)
