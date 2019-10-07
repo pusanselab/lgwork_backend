@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89a2b770-66cc-4ece-a8ca-4e5c78def3ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89a2b770-66cc-4ece-a8ca-4e5c78def3ad.xml" afterDir="false" />
-    </list>
+    <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,15 +59,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidu_casecade" pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_casecade">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sidu_awhp" pinned="false" current-in-tab="false">
         <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -106,7 +95,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idu" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidu_showcase" pinned="false" current-in-tab="true">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_showcase">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="idu" pinned="false" current-in-tab="false">
         <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -383,7 +381,7 @@
       <workItem from="1568870148951" duration="836000" />
       <workItem from="1569756518247" duration="4144000" />
       <workItem from="1569826265981" duration="8286000" />
-      <workItem from="1570004765505" duration="4267000" />
+      <workItem from="1570004765505" duration="4387000" />
     </task>
     <task id="LOCAL-00001" summary="login api complete">
       <created>1565093259703</created>
@@ -396,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70757000" />
+    <option name="totallyTimeSpent" value="70877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -417,7 +415,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.29694322" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14026846" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16040269" />
       <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.26510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -675,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_showcase">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_casecade">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -738,6 +729,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -745,7 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_showcase">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
