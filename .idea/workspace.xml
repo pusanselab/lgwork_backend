@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89a2b770-66cc-4ece-a8ca-4e5c78def3ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89a2b770-66cc-4ece-a8ca-4e5c78def3ad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/lg/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,11 +65,29 @@
       <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="719" column="33" lean-forward="true" selection-start-line="719" selection-start-column="33" selection-end-line="719" selection-end-column="33" />
+            <state relative-caret-position="223">
+              <caret line="952" column="11" selection-start-line="952" selection-end-line="953" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
-                <element signature="e#66#729#0" />
+                <element signature="e#69#305#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.ctrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -82,8 +101,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header" pinned="false" current-in-tab="false">
         <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -163,7 +191,6 @@
         <option value="$PROJECT_DIR$/middleware/router.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console.sql" />
         <option value="89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header.sql" />
-        <option value="$PROJECT_DIR$/controller/lg/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console_1.sql" />
         <option value="$PROJECT_DIR$/models/odu.model.js" />
         <option value="$PROJECT_DIR$/models/sidu_showcase.model.js" />
@@ -174,6 +201,8 @@
         <option value="$PROJECT_DIR$/models/idu.model.js" />
         <option value="$PROJECT_DIR$/models/header.model.js" />
         <option value="$PROJECT_DIR$/controller/lg/test.ctrl.js" />
+        <option value="$PROJECT_DIR$/controller/lg/index.js" />
+        <option value="$PROJECT_DIR$/controller/lg/admin.ctrl.js" />
       </list>
     </option>
   </component>
@@ -206,8 +235,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="975" />
+    <option name="x" value="585" />
+    <option name="y" value="40" />
+    <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -215,24 +245,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="lg" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -367,6 +397,8 @@
       <workItem from="1570004765505" duration="4267000" />
       <workItem from="1570010503220" duration="1662000" />
       <workItem from="1570445795982" duration="1665000" />
+      <workItem from="1570623062593" duration="140000" />
+      <workItem from="1570623209826" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="login api complete">
       <created>1565093259703</created>
@@ -379,7 +411,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74084000" />
+    <option name="totallyTimeSpent" value="76401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -396,11 +428,11 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32968238" />
       <window_info id="npm" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27802038" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.48471615" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.29694322" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14362416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19932885" />
       <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -433,13 +465,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/util/swagger.util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/user.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -515,7 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user" />
     <entry file="file://$PROJECT_DIR$/helpers/global_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -540,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -616,16 +633,6 @@
     </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru" />
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu" />
-    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="719" column="33" lean-forward="true" selection-start-line="719" selection-start-column="33" selection-end-line="719" selection-end-column="33" />
-          <folding>
-            <element signature="e#66#729#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -686,6 +693,37 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="952" column="11" selection-start-line="952" selection-end-line="953" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#69#305#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>
