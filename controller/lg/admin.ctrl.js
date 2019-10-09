@@ -30,7 +30,13 @@ const delete_header_data = (req, res) => {
             console.log(header_date)
             if(first_date < header_date) {
                 if(header_date < end_date) {
-                    console.log("yes")
+                    db.Header.destroy({
+                        where: {
+                            header_uid: headers[i].header_uid
+                        }
+                    }).then(resu => {
+                        return res.json(resu).end()
+                    })
                 }
             }
 
