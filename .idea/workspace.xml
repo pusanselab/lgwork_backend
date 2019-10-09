@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete">
-      <change beforePath="$PROJECT_DIR$/controller/lg/test.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/test.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/lg/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +42,7 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="lg_work" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lg_work: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="lg_work: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -51,75 +53,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/header.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="1083">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="680" column="48" lean-forward="true" selection-start-line="680" selection-start-column="48" selection-end-line="680" selection-end-column="48" />
+            <state relative-caret-position="223">
+              <caret line="952" column="11" selection-start-line="952" selection-end-line="953" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
-                <element signature="e#66#729#0" />
-                <element signature="e#770#4486#0" />
-                <element signature="e#4516#5221#0" />
-                <element signature="e#5254#19699#0" />
-                <element signature="e#19738#20268#0" />
-                <element signature="e#20304#24308#0" />
-                <element signature="e#24351#28216#0" />
-                <element signature="e#28417#29180#0" />
+                <element signature="e#69#305#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-              <filtering>
-                <filter text="" />
-              </filtering>
+      <file leaf-file-name="admin.ctrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-              <filtering />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="calorimeter" pinned="false" current-in-tab="false">
         <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-              <filtering />
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="header" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="idu" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calorimeter.model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/calorimeter.model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1311">
@@ -128,7 +137,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/db.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1007">
@@ -182,7 +191,6 @@
         <option value="$PROJECT_DIR$/middleware/router.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console.sql" />
         <option value="89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header.sql" />
-        <option value="$PROJECT_DIR$/controller/lg/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console_1.sql" />
         <option value="$PROJECT_DIR$/models/odu.model.js" />
         <option value="$PROJECT_DIR$/models/sidu_showcase.model.js" />
@@ -193,8 +201,14 @@
         <option value="$PROJECT_DIR$/models/idu.model.js" />
         <option value="$PROJECT_DIR$/models/header.model.js" />
         <option value="$PROJECT_DIR$/controller/lg/test.ctrl.js" />
+        <option value="$PROJECT_DIR$/controller/lg/index.js" />
+        <option value="$PROJECT_DIR$/controller/lg/admin.ctrl.js" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -202,16 +216,28 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand />
       <select />
     </treeState>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="775" />
-    <option name="y" value="2" />
-    <option name="width" value="978" />
+    <option name="x" value="585" />
+    <option name="y" value="40" />
+    <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -220,21 +246,23 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
+              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="lg" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -242,7 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,25 +320,51 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -343,6 +396,9 @@
       <workItem from="1569826265981" duration="8286000" />
       <workItem from="1570004765505" duration="4267000" />
       <workItem from="1570010503220" duration="1662000" />
+      <workItem from="1570445795982" duration="1665000" />
+      <workItem from="1570623062593" duration="140000" />
+      <workItem from="1570623209826" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="login api complete">
       <created>1565093259703</created>
@@ -355,47 +411,50 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72419000" />
+    <option name="totallyTimeSpent" value="76401000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14179105" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="npm" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.29694322" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27874187" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.33187294" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32968238" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.26492536" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.33187294" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32968238" />
+      <window_info id="npm" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.48471615" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.29694322" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19932885" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.24966443" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven" order="9" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login api complete" />
@@ -406,34 +465,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/sync_db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/pageable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/swagger.util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/user.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -509,7 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user" />
     <entry file="file://$PROJECT_DIR$/helpers/global_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -534,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -582,34 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_showcase">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_casecade">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_showcase" />
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_casecade" />
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp" />
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter" />
     <entry file="file://$PROJECT_DIR$/models/calorimeter.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
@@ -624,59 +623,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu" />
     <entry file="file://$PROJECT_DIR$/models/header.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="1083">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru">
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru" />
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu" />
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering />
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering>
-            <filter text="" />
-          </filtering>
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="bb897896-9660-40e6-aca8-27429df9dbdb">
-          <filtering>
-            <filter text="" />
-          </filtering>
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="680" column="48" lean-forward="true" selection-start-line="680" selection-start-column="48" selection-end-line="680" selection-end-column="48" />
+        <state relative-caret-position="223">
+          <caret line="952" column="11" selection-start-line="952" selection-end-line="953" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
           <folding>
-            <element signature="e#66#729#0" />
-            <element signature="e#770#4486#0" />
-            <element signature="e#4516#5221#0" />
-            <element signature="e#5254#19699#0" />
-            <element signature="e#19738#20268#0" />
-            <element signature="e#20304#24308#0" />
-            <element signature="e#24351#28216#0" />
-            <element signature="e#28417#29180#0" />
+            <element signature="e#69#305#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>

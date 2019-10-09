@@ -1,4 +1,5 @@
 const ctrl = require('./test.ctrl')
+const admin_ctrl = require('./admin.ctrl')
 const router = express.Router()
 
 /**
@@ -33,5 +34,5 @@ router.post('/graph_sidu_fau', ctrl.graph_sidu_fau)    // 테스트용
 router.post('/graph_sidu_showcase', ctrl.graph_sidu_showcase)    // 테스트용
 router.post('/graph_sidu_whu', ctrl.graph_sidu_whu)    // 테스트용
 
-
+router.post('/user/create', admin_ctrl.create_user)
 module.exports = router
