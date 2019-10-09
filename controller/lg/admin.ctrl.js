@@ -21,4 +21,22 @@ const create_user = (req, res) => {
 
 }
 
-module.exports = {create_user}
+const delete_header_data = (req, res) => {
+    const first_date = '2019-01-03'
+    const end_date  = '2019-01-05'
+    db.Header.findAll().then(headers => {
+        for(var i=0; i<headers.length; i++) {
+            var header_date = headers[i].lgmv_date.substring(0,10)
+            console.log(header_date)
+            if(first_date < header_date) {
+                if(header_date < end_date) {
+                    console.log("yes")
+                }
+            }
+
+        }
+    })
+
+}
+
+module.exports = {create_user, delete_header_data}
