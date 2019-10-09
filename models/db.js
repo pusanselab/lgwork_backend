@@ -52,6 +52,8 @@ db.Idu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targe
 // Calorimeter
 db.Header.hasMany(db.Calorimeter, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
 db.Calorimeter.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Calorimeter.belongsTo(db.Odu, {foreignKey: 'TXT_TIME', constraints: false, targetKey: 'TXT_TIME'})
+db.Calorimeter.belongsTo(db.Idu, {foreignKey: 'TXT_TIME', constraints: false, targetKey: 'TXT_TIME'})
 
 // Hru
 db.Header.hasMany(db.Hru, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
