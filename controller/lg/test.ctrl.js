@@ -1,4 +1,4 @@
-var sequelize = require('sequelize');
+const sequelize = require('sequelize');
 
 const test = (req, res) => {
     // db.User.findAll().then(result => {
@@ -42,12 +42,7 @@ const redundancy_check = (req, res) => {
 
     const result = {
         content : {
-            header_uid : 0,
-            raw : {},
-            header : {}
         },
-        raw : {},
-        header :{}
     };
 
     db.Header.findAll({
@@ -64,27 +59,34 @@ const redundancy_check = (req, res) => {
         include:[
             {
                 model : db.Calorimeter,
-                attributes: ['EER']
+                attributes: [
+                    'TXT_TIME',
+                    [sequelize.fn('MAX',sequelize.col('EER')), 'EER']
+                ],
+                include:[
+                    {
+                        model : db.Odu,
+                        attributes: [
+                            "TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE",
+                            "TXT_FAN1_TRACE","TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"
+                        ]
+                    },
+                    {
+                        model : db.Idu,
+                        attributes: ["TXT_IDU_WIND"]
+                    }
+                ]
             }
-        ],
-        order:[
-            [
-                {
-                    model : db.Calorimeter,
-                    attributes: ['EER']
-                },
-                'EER', 'DESC'
-            ]
         ],
     }).then( header => {
         // console.log("header 값 : ", header)
         if(header.length == 0 ){
-            result.header.code = 400
-            result.header.message = "failure"
+            result.code = 400
+            result.message = "failure"
         }else{
-            result.content.header = header
-            result.header.code = 200
-            result.header.message = "success"
+            result.content = header
+            result.code = 200
+            result.message = "success"
 
             // for( var i = 0 ; i < header.length ; i++){
             //     console.log(i, "번째 데이터", header[i].dataValues)
