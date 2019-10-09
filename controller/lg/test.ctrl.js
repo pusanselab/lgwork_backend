@@ -418,7 +418,17 @@ const overview = (req, res) => {
                                                                                 result.content.test[5] = counter.dataValues
                                                                                 result.content.test[5].name = '기타'
 
-                                                                                return res.json(result)
+                                                                                db.Odu.findOne({
+                                                                                    attributes: [
+                                                                                        [sequelize.fn('count', sequelize.col('odu_uid')), 'count']
+                                                                                    ]
+                                                                                }).then(counter => {
+                                                                                    result.content.db_usage = (counter.dataValues.count/1000000000).toFixed(10)
+                                                                                    console.log(result.content.db_usage)
+
+                                                                                    return res.json(result)
+
+                                                                                })
                                                                             })
                                                                         })
                                                                     })
