@@ -42,46 +42,46 @@ const db = {
 
 
 // ODU
-db.Header.hasMany(db.Odu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Odu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Odu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Odu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // IDU
-db.Header.hasMany(db.Idu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Idu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Idu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Idu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Calorimeter
-db.Header.hasMany(db.Calorimeter, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Calorimeter.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Calorimeter, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Calorimeter.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 db.Calorimeter.belongsTo(db.Odu, {foreignKey: 'TXT_TIME', constraints: false, targetKey: 'TXT_TIME'})
 db.Calorimeter.belongsTo(db.Idu, {foreignKey: 'TXT_TIME', constraints: false, targetKey: 'TXT_TIME'})
 
 // Hru
-db.Header.hasMany(db.Hru, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Hru.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Hru, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Hru.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_whu
-db.Header.hasMany(db.Sidu_whu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_whu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_whu, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_whu.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_cascade
-db.Header.hasMany(db.Sidu_cascade, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_cascade.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_cascade, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_cascade.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_showcase
-db.Header.hasMany(db.Sidu_showcase, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_showcase.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_showcase, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_showcase.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_awhp
-db.Header.hasMany(db.Sidu_awhp, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_awhp.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_awhp, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_awhp.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_fau
-db.Header.hasMany(db.Sidu_fau, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_fau.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_fau, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_fau.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 // Sidu_dxc
-db.Header.hasMany(db.Sidu_dxc, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid'})
-db.Sidu_dxc.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid'})
+db.Header.hasMany(db.Sidu_dxc, {foreignKey: 'header_uid', constraints: false, sourceKey: 'header_uid', onDelete: 'cascade'})
+db.Sidu_dxc.belongsTo(db.Header, {foreignKey: 'header_uid', constraints: false, targetKey: 'header_uid', onDelete: 'cascade'})
 
 
 

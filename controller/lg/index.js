@@ -35,4 +35,5 @@ router.post('/graph_sidu_showcase', ctrl.graph_sidu_showcase)    // 테스트용
 router.post('/graph_sidu_whu', ctrl.graph_sidu_whu)    // 테스트용
 
 router.post('/user/create', admin_ctrl.create_user)
+router.post('/data/delete', admin_ctrl.delete_header_data)
 module.exports = router
