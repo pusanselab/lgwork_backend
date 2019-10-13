@@ -18,7 +18,7 @@ const router = express.Router()
  *         description: success
  */
 router.get('/', ctrl.test)    // 테스트용
-router.post('/redundancy_check', ctrl.redundancy_check)    // 테스트용
+router.get('/redundancy_check', ctrl.redundancy_check)    // 테스트용
 router.post('/login', ctrl.login)    // 테스트용
 router.post('/overview', ctrl.overview)    // 테스트용
 router.post('/data_search_id', ctrl.data_search_id)    // 테스트용
@@ -33,6 +33,7 @@ router.post('/graph_sidu_dxc', ctrl.graph_sidu_dxc)    // 테스트용
 router.post('/graph_sidu_fau', ctrl.graph_sidu_fau)    // 테스트용
 router.post('/graph_sidu_showcase', ctrl.graph_sidu_showcase)    // 테스트용
 router.post('/graph_sidu_whu', ctrl.graph_sidu_whu)    // 테스트용
+router.post('/chamber_status', ctrl.chamber_status)    // 테스트용
 
 router.post('/user/create', admin_ctrl.create_user)
 router.post('/data/delete', admin_ctrl.delete_header_data)
