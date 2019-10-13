@@ -9,9 +9,7 @@ const test = (req, res) => {
     const result = {}
 
     db.Header.findAll({
-        where : {
-            test_step1: "기타"
-        }
+
     }).then( header => {
         if(header.length == null){
             result.code = 400
@@ -29,16 +27,17 @@ const test = (req, res) => {
 }
 
 const redundancy_check = (req, res) => {
-    const lgmv_serial_number = req.body.lgmv_serial_number;
-    const calorimeter_id_wb = req.body.calorimeter_id_wb;
-    const calorimeter_id_db = req.body.calorimeter_id_db;
-    const calorimeter_od_wb = req.body.calorimeter_od_wb;
-    const calorimeter_od_db = req.body.calorimeter_od_db;
-    const conn_operation_rate = req.body.conn_operation_rate;
-    const conn_testroom_number = req.body.conn_testroom_number;
-    const test_step2 = req.body.test_step2;
 
-    console.log(req.body)
+    const lgmv_serial_number = req.query.lgmv_serial_number;
+    const calorimeter_id_wb = req.query.calorimeter_id_wb;
+    const calorimeter_id_db = req.query.calorimeter_id_db;
+    const calorimeter_od_wb = req.query.calorimeter_od_wb;
+    const calorimeter_od_db = req.query.calorimeter_od_db;
+    const conn_operation_rate = req.query.conn_operation_rate;
+    const conn_testroom_number = req.query.conn_testroom_number;
+    const test_step2 = req.query.test_step2;
+
+    console.log(req.query)
 
     const result = {
         content : {
@@ -79,11 +78,13 @@ const redundancy_check = (req, res) => {
             }
         ],
     }).then( header => {
-        // console.log("header 값 : ", header)
+        console.log("header 값 : ", header)
         if(header.length == 0 ){
             result.code = 400
             result.message = "failure"
         }else{
+            // console.log(header)
+
             result.content = header
             result.code = 200
             result.message = "success"
@@ -160,6 +161,7 @@ const redundancy_check = (req, res) => {
             //     })
             // }
 
+            // console.log(result)
 
             return res.json(result)
         }
@@ -448,6 +450,32 @@ const overview = (req, res) => {
             })
         })
     })
+}
+
+const chamber_status= (req, res) => {
+    const result = {}
+
+    db.Header.findAll({
+        order:[
+            ['lgmv_date', 'DESC']
+        ],
+        limit : 5
+    }).then( header => {
+        if(header.length == null){
+            result.code = 400
+            result.message = "failure"
+            return res.json(result)
+        }else{
+            console.log(header)
+            result.content = header
+            result.code = 200
+            result.message = "success"
+            console.log(result)
+            return res.json(result)
+        }
+    })
+
+
 }
 
 const data_search_id = (req, res) => {
@@ -961,7 +989,7 @@ const graph_sidu_whu = (req, res) => {
 
 
 module.exports = {
-    test, redundancy_check, login, overview,  data_search, data_search_id, data_search_detail,
+    test, redundancy_check, login, overview, chamber_status, data_search, data_search_id, data_search_detail,
     graph_odu, graph_idu, graph_hru, graph_calolimeter, graph_sidu_awhp, graph_sidu_casecade,
     graph_sidu_dxc, graph_sidu_fau, graph_sidu_showcase, graph_sidu_whu
 }
