@@ -8,14 +8,12 @@ const test = (req, res) => {
     // })
     const result = {}
 
-    db.Header.findAll({
-
-    }).then( header => {
-        if(header.length == null){
+    db.Header.findAll({}).then(header => {
+        if (header.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(header)
             result.content = header
             result.code = 200
@@ -37,15 +35,11 @@ const redundancy_check = (req, res) => {
     const conn_testroom_number = req.query.conn_testroom_number;
     const test_step2 = req.query.test_step2;
 
-    console.log(req.query)
 
-    const result = {
-        content : {
-        },
-    };
-
+    const result = {}
+    result.content = {}
     db.Header.findAll({
-        where : {
+        where: {
             lgmv_serial_number: lgmv_serial_number,
             calorimeter_id_wb: calorimeter_id_wb,
             calorimeter_id_db: calorimeter_id_db,
@@ -54,116 +48,100 @@ const redundancy_check = (req, res) => {
             conn_operation_rate: conn_operation_rate,
             conn_testroom_number: conn_testroom_number,
             test_step2: test_step2
-        },
-        include:[
-            {
-                model : db.Calorimeter,
-                attributes: [
-                    'TXT_TIME',
-                    [sequelize.fn('MAX',sequelize.col('EER')), 'EER']
-                ],
-                include:[
-                    {
-                        model : db.Odu,
-                        attributes: [
-                            "TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE",
-                            "TXT_FAN1_TRACE","TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"
-                        ]
-                    },
-                    {
-                        model : db.Idu,
-                        attributes: ["TXT_IDU_WIND"]
-                    }
-                ]
-            }
-        ],
-    }).then( header => {
-        console.log("header 값 : ", header)
-        if(header.length == 0 ){
+        }
+        // include:[
+        //     {
+        //         model : db.Calorimeter,
+        //         attributes: [
+        //             'TXT_TIME',
+        //             [sequelize.fn('MAX',sequelize.col('EER')), 'EER']
+        //         ],
+        //         include:[
+        //             {
+        //                 model : db.Odu,
+        //                 attributes: [
+        //                     "TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE",
+        //                     "TXT_FAN1_TRACE","TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"
+        //                 ]
+        //             },
+        //             {
+        //                 model : db.Idu,
+        //                 attributes: ["TXT_IDU_WIND"]
+        //             }
+        //         ]
+        //     }
+        // ],
+    }).then(async header => {
+        if (header.length == 0) {
             result.code = 400
             result.message = "failure"
-        }else{
+        } else {
             // console.log(header)
 
-            result.content = header
             result.code = 200
             result.message = "success"
+            re_arr = []
+             for (let i = 0; i < header.length; i++) {
+                re_obj = {}
+                re_obj.odu = {}
+                re_obj.idu = {}
 
-            // for( var i = 0 ; i < header.length ; i++){
-            //     console.log(i, "번째 데이터", header[i].dataValues)
-            //     result.content[i].header_uid = header[i].dataValues.header_uid
-            //
-            //     var header_uid = result.content[i].header_uid
-            //
-            //     console.log("header_uid : ", header_uid)
-            //
-            //     db.Calorimeter.findAll({
-            //         where : {
-            //             header_uid: header_uid
-            //         },
-            //         order:[
-            //             ['EER', 'DESC']
-            //         ]
-            //         //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
-            //     }).then( calorimeter => {
-            //         if(calorimeter.length == 0 ){
-            //             result.raw.code = 400
-            //             result.raw.message = "failure"
-            //             return res.json(result)
-            //         }else{
-            //             const index = calorimeter[0].dataValues.TXT_TIME
-            //             const EER = calorimeter[0].dataValues.EER
-            //
-            //             result.content[i].header = header[i]
-            //             result.content[i].raw.EER = EER
-            //
-            //             console.log("content[i].header  : 위에 헤더")
-            //             console.log("content[i].raw.EER : ", EER)
-            //
-            //
-            //             db.Odu.findOne({
-            //                 where : {
-            //                     header_uid : header_uid,
-            //                     TXT_TIME : index
-            //                 },
-            //                 attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
-            //             }).then( odu => {
-            //                 const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
-            //                 const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
-            //                 const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
-            //                 const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
-            //                 const main_eev = odu.TXT_MAIN_EEV
-            //                 const sub_eev = odu.TXT_SUB_EEV
-            //
-            //                 result.content[i].raw.compressor_1 = compressor_1
-            //                 result.content[i].raw.compressor_2 = compressor_2
-            //                 result.content[i].raw.odu_fan_rpm1 = odu_fan_rpm1
-            //                 result.content[i].raw.odu_fan_rpm2 = odu_fan_rpm2
-            //                 result.content[i].raw.main_eev = main_eev
-            //                 result.content[i].raw.sub_eev = sub_eev
-            //
-            //                 db.Idu.findOne({
-            //                     where : {
-            //                             header_uid : header_uid,
-            //                         TXT_TIME : index
-            //                     },
-            //                     attributes : ["TXT_IDU_WIND"]
-            //                 }).then( idu => {
-            //                     const idu1_fan_rpm = idu.TXT_IDU_WIND
-            //
-            //                     result.content[i].raw.idu1_fan_rpm = idu1_fan_rpm
-            //                     result.raw.code = 200
-            //                     result.raw.message = "success"
-            //
-            //                 })
-            //             })
-            //         }
-            //     })
-            // }
+                var header_uid = header[i].dataValues.header_uid
+                // console.log(i, "번째 데이터", header[i].dataValues)
+                re_obj.header = header[i]
 
-            // console.log(result)
+                await db.Calorimeter.findOne({
+                    where: {
+                        header_uid: header_uid
+                    },
+                    attributes: [
+                        'TXT_TIME',
+                        [sequelize.fn('MAX', sequelize.col('EER')), 'EER']
+                    ],
+                }).then(calorimeter => {
+                    re_obj.calorimeter = calorimeter
+                    // result.content[i].header = header[i]
+                    // result.content[i].raw.EER = EER
 
-            return res.json(result)
+                   db.Odu.findOne({
+                        where: {
+                            header_uid: header_uid,
+                            TXT_TIME: calorimeter.dataValues.TXT_TIME
+                        },
+                        attributes: ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
+                    }).then(odu => {
+                        const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
+                        const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
+                        const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
+                        const odu_fan_rpm2 = odu.TXT_FAN2_TRACE
+                        const main_eev = odu.TXT_MAIN_EEV
+                        const sub_eev = odu.TXT_SUB_EEV
+
+                        re_obj.odu.compressor_1 = compressor_1
+                        re_obj.odu.compressor_2 = compressor_2
+                        re_obj.odu.odu_fan_rpm1 = odu_fan_rpm1
+                        re_obj.odu.odu_fan_rpm2 = odu_fan_rpm2
+                        re_obj.odu.main_eev = main_eev
+                        re_obj.odu.sub_eev = sub_eev
+                    })
+                     db.Idu.findOne({
+                        where: {
+                            header_uid: header_uid,
+                            TXT_TIME: calorimeter.dataValues.TXT_TIME
+                        },
+                        attributes: ["TXT_IDU_WIND"]
+                    }).then(idu => {
+                        const idu1_fan_rpm = idu.TXT_IDU_WIND
+
+                        re_obj.idu.idu1_fan_rpm = idu1_fan_rpm
+                        re_arr.push(re_obj)
+                        if(i === header.length-1) {
+                            result.content = re_arr
+                            return res.json(result)
+                        }
+                    })
+                })
+            }
         }
     })
 }
@@ -177,20 +155,20 @@ const login = (req, res) => {
     console.log(req.body)
     const result = {};
     db.User.findOne({
-        where : {
+        where: {
             id: Id
         }
-    }).then( user => {
-        if(user == null ){
+    }).then(user => {
+        if (user == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else if(user.pwd === Pwd){
+        } else if (user.pwd === Pwd) {
             result.code = 200
             result.message = "success"
             return res.json(result)
         }
-        else{
+        else {
             result.code = 400
             result.message = "failure"
             return res.json(result)
@@ -200,11 +178,11 @@ const login = (req, res) => {
 
 const overview = (req, res) => {
     const result = {
-        content : {
-            model : [
+        content: {
+            model: [
                 {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
             ],
-            test : [
+            test: [
                 {}, {}, {}, {}, {}, {}
             ]
         }
@@ -217,7 +195,7 @@ const overview = (req, res) => {
         attributes: [
             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
         ],
-    }).then( counter => {
+    }).then(counter => {
         console.log(counter.dataValues)
         result.content.model[0] = counter.dataValues
         result.content.model[0].name = 'Multi V H/P'
@@ -229,7 +207,7 @@ const overview = (req, res) => {
             attributes: [
                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
             ],
-        }).then( counter => {
+        }).then(counter => {
             result.content.model[1] = counter.dataValues
             result.content.model[1].name = 'Multi V H/R'
 
@@ -240,7 +218,7 @@ const overview = (req, res) => {
                 attributes: [
                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                 ],
-            }).then( counter => {
+            }).then(counter => {
                 result.content.model[2] = counter.dataValues
                 result.content.model[2].name = 'Multi V ARUM'
 
@@ -251,7 +229,7 @@ const overview = (req, res) => {
                     attributes: [
                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                     ],
-                }).then( counter => {
+                }).then(counter => {
                     result.content.model[3] = counter.dataValues
                     result.content.model[3].name = 'Multi Water'
 
@@ -262,7 +240,7 @@ const overview = (req, res) => {
                         attributes: [
                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                         ],
-                    }).then( counter => {
+                    }).then(counter => {
                         result.content.model[4] = counter.dataValues
                         result.content.model[4].name = 'Multi V S'
 
@@ -273,7 +251,7 @@ const overview = (req, res) => {
                             attributes: [
                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                             ],
-                        }).then( counter => {
+                        }).then(counter => {
                             result.content.model[5] = counter.dataValues
                             result.content.model[5].name = 'Multi V M'
 
@@ -284,7 +262,7 @@ const overview = (req, res) => {
                                 attributes: [
                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                 ],
-                            }).then( counter => {
+                            }).then(counter => {
                                 result.content.model[6] = counter.dataValues
                                 result.content.model[6].name = 'Multi V Space'
 
@@ -295,7 +273,7 @@ const overview = (req, res) => {
                                     attributes: [
                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                     ],
-                                }).then( counter => {
+                                }).then(counter => {
                                     result.content.model[7] = counter.dataValues
                                     result.content.model[7].name = 'GHP'
 
@@ -306,7 +284,7 @@ const overview = (req, res) => {
                                         attributes: [
                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                         ],
-                                    }).then( counter => {
+                                    }).then(counter => {
                                         result.content.model[8] = counter.dataValues
                                         result.content.model[8].name = 'Chiller'
 
@@ -317,7 +295,7 @@ const overview = (req, res) => {
                                             attributes: [
                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                             ],
-                                        }).then( counter => {
+                                        }).then(counter => {
                                             result.content.model[9] = counter.dataValues
                                             result.content.model[9].name = 'Therma V'
 
@@ -328,7 +306,7 @@ const overview = (req, res) => {
                                                 attributes: [
                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                 ],
-                                            }).then( counter => {
+                                            }).then(counter => {
                                                 result.content.model[10] = counter.dataValues
                                                 result.content.model[10].name = 'Single Package'
 
@@ -339,7 +317,7 @@ const overview = (req, res) => {
                                                     attributes: [
                                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                     ],
-                                                }).then( counter => {
+                                                }).then(counter => {
                                                     result.content.model[11] = counter.dataValues
                                                     result.content.model[11].name = 'Single&Multi'
 
@@ -350,7 +328,7 @@ const overview = (req, res) => {
                                                         attributes: [
                                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                         ],
-                                                    }).then( counter => {
+                                                    }).then(counter => {
                                                         result.content.model[12] = counter.dataValues
                                                         result.content.model[12].name = 'Refrigeration'
 
@@ -361,7 +339,7 @@ const overview = (req, res) => {
                                                             attributes: [
                                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                             ],
-                                                        }).then( counter => {
+                                                        }).then(counter => {
                                                             result.content.test[0] = counter.dataValues
                                                             result.content.test[0].name = '성능'
 
@@ -372,7 +350,7 @@ const overview = (req, res) => {
                                                                 attributes: [
                                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                                 ],
-                                                            }).then( counter => {
+                                                            }).then(counter => {
                                                                 result.content.test[1] = counter.dataValues
                                                                 result.content.test[1].name = '냉방성능'
 
@@ -383,7 +361,7 @@ const overview = (req, res) => {
                                                                     attributes: [
                                                                         [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                                     ],
-                                                                }).then( counter => {
+                                                                }).then(counter => {
                                                                     result.content.test[2] = counter.dataValues
                                                                     result.content.test[2].name = '난방성능'
 
@@ -394,7 +372,7 @@ const overview = (req, res) => {
                                                                         attributes: [
                                                                             [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                                         ],
-                                                                    }).then( counter => {
+                                                                    }).then(counter => {
                                                                         result.content.test[3] = counter.dataValues
                                                                         result.content.test[3].name = '안정성'
 
@@ -405,7 +383,7 @@ const overview = (req, res) => {
                                                                             attributes: [
                                                                                 [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                                             ],
-                                                                        }).then( counter => {
+                                                                        }).then(counter => {
                                                                             result.content.test[4] = counter.dataValues
                                                                             result.content.test[4].name = '신뢰성'
 
@@ -416,7 +394,7 @@ const overview = (req, res) => {
                                                                                 attributes: [
                                                                                     [sequelize.fn('count', sequelize.col('lgmv_model_filter1')), 'count']
                                                                                 ],
-                                                                            }).then( counter => {
+                                                                            }).then(counter => {
                                                                                 result.content.test[5] = counter.dataValues
                                                                                 result.content.test[5].name = '기타'
 
@@ -425,7 +403,7 @@ const overview = (req, res) => {
                                                                                         [sequelize.fn('count', sequelize.col('odu_uid')), 'count']
                                                                                     ]
                                                                                 }).then(counter => {
-                                                                                    result.content.db_usage = (counter.dataValues.count/1000000000).toFixed(10)
+                                                                                    result.content.db_usage = (counter.dataValues.count / 1000000000).toFixed(10)
                                                                                     console.log(result.content.db_usage)
 
                                                                                     return res.json(result)
@@ -452,20 +430,20 @@ const overview = (req, res) => {
     })
 }
 
-const chamber_status= (req, res) => {
+const chamber_status = (req, res) => {
     const result = {}
 
     db.Header.findAll({
-        order:[
+        order: [
             ['lgmv_date', 'DESC']
         ],
-        limit : 5
-    }).then( header => {
-        if(header.length == null){
+        limit: 5
+    }).then(header => {
+        if (header.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(header)
             result.content = header
             result.code = 200
@@ -484,10 +462,10 @@ const data_search_id = (req, res) => {
     const result = {};
 
     db.Header.findOne({
-        where : {
+        where: {
             header_uid: uid
         }
-    }).then( header => {
+    }).then(header => {
         db.Calorimeter.findOne({
             where: {
                 header_uid: uid
@@ -495,12 +473,12 @@ const data_search_id = (req, res) => {
             attributes: [
                 [sequelize.fn('count', sequelize.col('calorimeter_uid')), 'count']
             ],
-        }).then(Calorimeter =>{
-            if(header == null){
+        }).then(Calorimeter => {
+            if (header == null) {
                 result.code = 400
                 result.message = "failure"
                 return res.json(result)
-            }else{
+            } else {
                 console.log(Calorimeter)
                 console.log(header.dataValues)
                 result.content = header.dataValues
@@ -529,8 +507,8 @@ const data_search = (req, res) => {
     const calorimeter_od_wb = req.body.calorimeter_od_wb
     const calorimeter_od_db = req.body.calorimeter_od_db
     const conn_file_date = req.body.conn_file_date
-    const idu_chassis  = req.body.idu_chassis
-    const odu_chassis  = req.body.odu_chassis
+    const idu_chassis = req.body.idu_chassis
+    const odu_chassis = req.body.odu_chassis
     const plm_step1 = req.body.plm_step1
     const plm_step2 = req.body.plm_step2
     const conn_tester = req.body.conn_tester
@@ -543,48 +521,102 @@ const data_search = (req, res) => {
     const result = {}
     const query = {}
 
-    function execption_checker(input){
-        if(input == "" || input == undefined){ return false }
-        else{ return true }
+    function execption_checker(input) {
+        if (input == "" || input == undefined) {
+            return false
+        }
+        else {
+            return true
+        }
     }
 
-    if(execption_checker(lgmv_model_filter1)){ query.lgmv_model_filter1 = lgmv_model_filter1 }
-    if(execption_checker(lgmv_model_filter2)){ query.lgmv_model_filter2 = lgmv_model_filter2 }
-    if(execption_checker(lgmv_model_name)){ query.lgmv_model_name = lgmv_model_name }
-    if(execption_checker(lgmv_r)){ query.lgmv_r = lgmv_r }
-    if(execption_checker(lgmv_main_ver)){ query.lgmv_main_ver = lgmv_main_ver }
-    if(execption_checker(lgmv_eep_ver)){ query.lgmv_eep_ver = lgmv_eep_ver }
-    if(execption_checker(calorimeter_cap)){ query.calorimeter_cap = calorimeter_cap }
-    if(execption_checker(calorimeter_power)){ query.calorimeter_power = calorimeter_power }
-    if(execption_checker(calorimeter_eer)){ query.calorimeter_eer = calorimeter_eer }
-    if(execption_checker(calorimeter_power_vol)){ query.calorimeter_power_vol = calorimeter_power_vol }
-    if(execption_checker(calorimeter_id_wb)){ query.calorimeter_id_wb = calorimeter_id_wb }
-    if(execption_checker(calorimeter_id_db)){ query.calorimeter_id_db = calorimeter_id_db }
-    if(execption_checker(calorimeter_od_wb)){ query.calorimeter_od_wb = calorimeter_od_wb }
-    if(execption_checker(calorimeter_od_db)){ query.calorimeter_od_db = calorimeter_od_db }
-    if(execption_checker(conn_file_date)){ query.conn_file_date = conn_file_date }
-    if(execption_checker(idu_chassis)){ query.idu_chassis = idu_chassis }
-    if(execption_checker(odu_chassis)){ query.odu_chassis = odu_chassis }
-    if(execption_checker(plm_step1)){ query.plm_step1 = plm_step1 }
-    if(execption_checker(plm_step2)){ query.plm_step2 = plm_step2 }
-    if(execption_checker(conn_tester)){ query.conn_tester = conn_tester }
-    if(execption_checker(conn_testroom_number)){ query.conn_testroom_number = conn_testroom_number }
-    if(execption_checker(conn_pipe_type)){ query.conn_pipe_type = conn_pipe_type }
-    if(execption_checker(conn_test_result)){ query.conn_test_result = conn_test_result }
-    if(execption_checker(conn_memo)){ query.conn_memo = conn_memo }
-    if(execption_checker(conn_operation_rate)){ query.conn_operation_rate = conn_operation_rate }
+    if (execption_checker(lgmv_model_filter1)) {
+        query.lgmv_model_filter1 = lgmv_model_filter1
+    }
+    if (execption_checker(lgmv_model_filter2)) {
+        query.lgmv_model_filter2 = lgmv_model_filter2
+    }
+    if (execption_checker(lgmv_model_name)) {
+        query.lgmv_model_name = lgmv_model_name
+    }
+    if (execption_checker(lgmv_r)) {
+        query.lgmv_r = lgmv_r
+    }
+    if (execption_checker(lgmv_main_ver)) {
+        query.lgmv_main_ver = lgmv_main_ver
+    }
+    if (execption_checker(lgmv_eep_ver)) {
+        query.lgmv_eep_ver = lgmv_eep_ver
+    }
+    if (execption_checker(calorimeter_cap)) {
+        query.calorimeter_cap = calorimeter_cap
+    }
+    if (execption_checker(calorimeter_power)) {
+        query.calorimeter_power = calorimeter_power
+    }
+    if (execption_checker(calorimeter_eer)) {
+        query.calorimeter_eer = calorimeter_eer
+    }
+    if (execption_checker(calorimeter_power_vol)) {
+        query.calorimeter_power_vol = calorimeter_power_vol
+    }
+    if (execption_checker(calorimeter_id_wb)) {
+        query.calorimeter_id_wb = calorimeter_id_wb
+    }
+    if (execption_checker(calorimeter_id_db)) {
+        query.calorimeter_id_db = calorimeter_id_db
+    }
+    if (execption_checker(calorimeter_od_wb)) {
+        query.calorimeter_od_wb = calorimeter_od_wb
+    }
+    if (execption_checker(calorimeter_od_db)) {
+        query.calorimeter_od_db = calorimeter_od_db
+    }
+    if (execption_checker(conn_file_date)) {
+        query.conn_file_date = conn_file_date
+    }
+    if (execption_checker(idu_chassis)) {
+        query.idu_chassis = idu_chassis
+    }
+    if (execption_checker(odu_chassis)) {
+        query.odu_chassis = odu_chassis
+    }
+    if (execption_checker(plm_step1)) {
+        query.plm_step1 = plm_step1
+    }
+    if (execption_checker(plm_step2)) {
+        query.plm_step2 = plm_step2
+    }
+    if (execption_checker(conn_tester)) {
+        query.conn_tester = conn_tester
+    }
+    if (execption_checker(conn_testroom_number)) {
+        query.conn_testroom_number = conn_testroom_number
+    }
+    if (execption_checker(conn_pipe_type)) {
+        query.conn_pipe_type = conn_pipe_type
+    }
+    if (execption_checker(conn_test_result)) {
+        query.conn_test_result = conn_test_result
+    }
+    if (execption_checker(conn_memo)) {
+        query.conn_memo = conn_memo
+    }
+    if (execption_checker(conn_operation_rate)) {
+        query.conn_operation_rate = conn_operation_rate
+    }
 
     console.log("쿼리다", query)
 
     db.Header.findAll({
-        where : query
-    }).then( header => {
-        if(header.length == 0){
+        where: query
+    }).then(header => {
+        if (header.length == 0) {
             console.log("왜 일로들오노?")
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             result.content = header
             result.code = 200
             result.message = "success"
@@ -606,16 +638,16 @@ const data_search_detail = (req, res) => {
     const header_uid = req.body.header_uid;
 
     const result = {
-        content : {
-            cooling_performance : {},
-            header : {}
+        content: {
+            cooling_performance: {},
+            header: {}
         },
-        header :{},
-        cooling_performance : {}
+        header: {},
+        cooling_performance: {}
     };
 
     db.Header.findAll({
-        where : {
+        where: {
             lgmv_serial_number: lgmv_serial_number,
             calorimeter_id_wb: calorimeter_id_wb,
             calorimeter_id_db: calorimeter_id_db,
@@ -625,42 +657,42 @@ const data_search_detail = (req, res) => {
             conn_testroom_number: conn_testroom_number,
             test_step2: test_step2
         }
-    }).then( header => {
+    }).then(header => {
         console.log("header 값 : ", header)
-        if(header.length == 0 ){
+        if (header.length == 0) {
             result.header.code = 400
             result.header.message = "failure"
-        }else{
+        } else {
             result.content.header = header
             result.header.code = 200
             result.header.message = "success"
         }
-    }).then( db.Calolimeter.findAll({
-        where : {
+    }).then(db.Calolimeter.findAll({
+        where: {
             header_uid: header_uid
         },
-        order:[
+        order: [
             ['EER', 'DESC']
         ]
         //attributes: [sequelize.fn('MAX', 'EER'), 'EER']
-    }).then( calorimeter => {
-        if(calorimeter.length == 0 ){
+    }).then(calorimeter => {
+        if (calorimeter.length == 0) {
             result.cooling_performance.code = 400
             result.cooling_performance.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             const index = calorimeter[0].dataValues.TXT_TIME;
             const EER = calorimeter[0].dataValues.EER
 
             result.content.cooling_performance.EER = EER
 
             db.Odu.findOne({
-                where : {
-                    header_uid : header_uid,
+                where: {
+                    header_uid: header_uid,
                     // TXT_TIME : index
                 },
-                attributes : ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
-            }).then( odu => {
+                attributes: ["TXT_INV1_TARGETTING_N_TRACE", "TXT_INV2_TARGETTING_N_TRACE", "TXT_FAN1_TRACE", "TXT_FAN2_TRACE", "TXT_MAIN_EEV", "TXT_SUB_EEV"]
+            }).then(odu => {
                 const compressor_1 = odu.TXT_INV1_TARGETTING_N_TRACE
                 const compressor_2 = odu.TXT_INV2_TARGETTING_N_TRACE
                 const odu_fan_rpm1 = odu.TXT_FAN1_TRACE
@@ -676,12 +708,12 @@ const data_search_detail = (req, res) => {
                 result.content.cooling_performance.sub_eev = sub_eev
 
                 db.Idu.findOne({
-                    where : {
-                        header_uid : header_uid,
-                        TXT_TIME : index
+                    where: {
+                        header_uid: header_uid,
+                        TXT_TIME: index
                     },
-                    attributes : ["TXT_IDU_WIND"]
-                }).then( idu => {
+                    attributes: ["TXT_IDU_WIND"]
+                }).then(idu => {
                     const idu1_fan_rpm = idu.TXT_IDU_WIND
 
                     result.content.cooling_performance.idu1_fan_rpm = idu1_fan_rpm
@@ -703,17 +735,17 @@ const graph_odu = (req, res) => {
     const result = {}
 
     db.Odu.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -730,23 +762,23 @@ const graph_idu = (req, res) => {
     const column_name = req.body.column_name
 
     const result = {
-        content:{
-            model : []
+        content: {
+            model: []
         }
     }
 
     db.Idu.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content.model = send_data
             result.code = 200
@@ -765,17 +797,17 @@ const graph_hru = (req, res) => {
     const result = {}
 
     db.Hru.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -793,16 +825,16 @@ const graph_calolimeter = (req, res) => {
     const result = {}
 
     db.Calolimeter.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -821,17 +853,17 @@ const graph_sidu_awhp = (req, res) => {
     const result = {}
 
     db.Sidu_awhp.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -850,17 +882,17 @@ const graph_sidu_casecade = (req, res) => {
     const result = {}
 
     db.Sidu_cascade.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -879,17 +911,17 @@ const graph_sidu_dxc = (req, res) => {
     const result = {}
 
     db.Sidu_dxc.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -908,17 +940,17 @@ const graph_sidu_fau = (req, res) => {
     const result = {}
 
     db.Sidu_fau.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -937,17 +969,17 @@ const graph_sidu_showcase = (req, res) => {
     const result = {}
 
     db.Sidu_showcase.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200
@@ -966,17 +998,17 @@ const graph_sidu_whu = (req, res) => {
     const result = {}
 
     db.Sidu_whu.findAll({
-        where : {
+        where: {
             header_uid: header_uid,
             section_count: section_count
         },
-        attributes : [[column_name, "value"], "TXT_TIME"]
-    }).then( send_data => {
-        if(send_data.length == null){
+        attributes: [[column_name, "value"], "TXT_TIME"]
+    }).then(send_data => {
+        if (send_data.length == null) {
             result.code = 400
             result.message = "failure"
             return res.json(result)
-        }else{
+        } else {
             console.log(send_data)
             result.content = send_data
             result.code = 200

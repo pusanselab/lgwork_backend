@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/lg/admin.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/admin.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/lg/test.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/test.ctrl.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +53,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18829">
-              <caret line="991" column="62" selection-start-line="991" selection-start-column="62" selection-end-line="991" selection-end-column="62" />
+            <state relative-caret-position="-450">
+              <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+              <folding>
+                <element signature="e#1708#1720#0" />
+                <element signature="e#2588#2668#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +69,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="47">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -74,8 +78,8 @@
       <file leaf-file-name="admin.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            <state relative-caret-position="112">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -92,14 +96,14 @@
       <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
+            <state relative-caret-position="236">
               <caret line="56" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header" pinned="false" current-in-tab="true">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
+      <file leaf-file-name="sidu_awhp" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -107,8 +111,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidu_awhp" pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
+      <file leaf-file-name="header" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -161,6 +165,8 @@
       <find>step</find>
       <find>/api/data_search_id</find>
       <find>conn_te</find>
+      <find>redu</find>
+      <find>999.363437843884</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,11 +202,11 @@
         <option value="$PROJECT_DIR$/models/calorimeter.model.js" />
         <option value="$PROJECT_DIR$/models/idu.model.js" />
         <option value="$PROJECT_DIR$/models/header.model.js" />
-        <option value="$PROJECT_DIR$/controller/lg/test.ctrl.js" />
         <option value="$PROJECT_DIR$/controller/lg/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console_2.sql" />
         <option value="$PROJECT_DIR$/models/db.js" />
         <option value="$PROJECT_DIR$/controller/lg/admin.ctrl.js" />
+        <option value="$PROJECT_DIR$/controller/lg/test.ctrl.js" />
       </list>
     </option>
   </component>
@@ -232,7 +238,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="585" />
     <option name="y" value="40" />
     <option name="width" value="1940" />
@@ -404,7 +410,7 @@
       <workItem from="1570623209826" duration="3274000" />
       <workItem from="1570637505647" duration="4254000" />
       <workItem from="1570965842389" duration="2116000" />
-      <workItem from="1571036055071" duration="1650000" />
+      <workItem from="1571036055071" duration="5287000" />
     </task>
     <task id="LOCAL-00001" summary="login api complete">
       <created>1565093259703</created>
@@ -417,10 +423,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85518000" />
+    <option name="totallyTimeSpent" value="89155000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -428,18 +434,18 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.33187294" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.37991267" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32968238" />
       <window_info id="npm" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40465793" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49932885" visible="true" weight="0.28820962" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.2954876" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20738254" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.24966443" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20268457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -465,6 +471,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login api complete" />
     <option name="LAST_COMMIT_MESSAGE" value="login api complete" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -679,49 +690,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18829">
-          <caret line="991" column="62" selection-start-line="991" selection-start-column="62" selection-end-line="991" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
+        <state relative-caret-position="236">
           <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="47">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
+    <entry file="file://$PROJECT_DIR$/controller/lg/admin.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -735,10 +732,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/header">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+          <folding>
+            <element signature="e#1708#1720#0" />
+            <element signature="e#2588#2668#0" />
+          </folding>
         </state>
       </provider>
     </entry>
