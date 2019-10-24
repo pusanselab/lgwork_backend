@@ -34,6 +34,7 @@ router.post('/graph_sidu_fau', ctrl.graph_sidu_fau)    // 테스트용
 router.post('/graph_sidu_showcase', ctrl.graph_sidu_showcase)    // 테스트용
 router.post('/graph_sidu_whu', ctrl.graph_sidu_whu)    // 테스트용
 router.post('/chamber_status', ctrl.chamber_status)    // 테스트용
+router.get('/make_csv', ctrl.make_csv)    // 테스트용
 
 router.post('/user/create', admin_ctrl.create_user)
 router.post('/data/delete', admin_ctrl.delete_header_data)

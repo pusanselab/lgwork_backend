@@ -81,7 +81,7 @@ const redundancy_check = (req, res) => {
             result.code = 200
             result.message = "success"
             re_arr = []
-             for (let i = 0; i < header.length; i++) {
+            for (let i = 0; i < header.length; i++) {
                 re_obj = {}
                 re_obj.odu = {}
                 re_obj.idu = {}
@@ -103,7 +103,7 @@ const redundancy_check = (req, res) => {
                     // result.content[i].header = header[i]
                     // result.content[i].raw.EER = EER
 
-                   db.Odu.findOne({
+                    db.Odu.findOne({
                         where: {
                             header_uid: header_uid,
                             TXT_TIME: calorimeter.dataValues.TXT_TIME
@@ -124,7 +124,7 @@ const redundancy_check = (req, res) => {
                         re_obj.odu.main_eev = main_eev
                         re_obj.odu.sub_eev = sub_eev
                     })
-                     db.Idu.findOne({
+                    db.Idu.findOne({
                         where: {
                             header_uid: header_uid,
                             TXT_TIME: calorimeter.dataValues.TXT_TIME
@@ -135,7 +135,7 @@ const redundancy_check = (req, res) => {
 
                         re_obj.idu.idu1_fan_rpm = idu1_fan_rpm
                         re_arr.push(re_obj)
-                        if(i === header.length-1) {
+                        if (i === header.length - 1) {
                             result.content = re_arr
                             return res.json(result)
                         }
@@ -1018,10 +1018,53 @@ const graph_sidu_whu = (req, res) => {
         }
     })
 }
+const make_csv = (req, res) => {
+    const header_uid = req.query.header_uid
+
+    db.Header.findOne({
+        where: {
+            header_uid: header_uid
+        },
+        include: [
+            {
+                model: db.Calorimeter,
+            },
+            // {
+            //     model: db.Hru
+            // },
+            // {
+            //     model: db.Idu
+            // },
+            // {
+            //     model: db.Odu
+            // },
+            // {
+            //     model: db.Sidu_awhp
+            // },
+            // {
+            //     model: db.Sidu_cascade
+            // },
+            // {
+            //     model: db.Sidu_dxc
+            // },
+            // {
+            //     model: db.Sidu_fau
+            // },
+            // {
+            //     model: db.Sidu_showcase
+            // },
+            // {
+            //     model: db.Sidu_whu
+            // }
+        ]
+    }).then(header =>  {
+        return res.json(header)
+    })
+}
 
 
 module.exports = {
     test, redundancy_check, login, overview, chamber_status, data_search, data_search_id, data_search_detail,
     graph_odu, graph_idu, graph_hru, graph_calolimeter, graph_sidu_awhp, graph_sidu_casecade,
-    graph_sidu_dxc, graph_sidu_fau, graph_sidu_showcase, graph_sidu_whu
+    graph_sidu_dxc, graph_sidu_fau, graph_sidu_showcase, graph_sidu_whu, make_csv
 }

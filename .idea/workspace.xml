@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04b1752d-a528-408b-883b-2ac33e9000e2" name="Default" comment="login api complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/lg/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/lg/test.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/lg/test.ctrl.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,13 +54,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
-              <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            <state relative-caret-position="95">
+              <caret line="1023" column="22" lean-forward="true" selection-start-line="1023" selection-start-column="22" selection-end-line="1023" selection-end-column="22" />
               <folding>
-                <element signature="e#1708#1720#0" />
                 <element signature="e#2588#2668#0" />
               </folding>
             </state>
@@ -69,8 +69,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="184">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -102,8 +102,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidu_awhp" pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
+      <file leaf-file-name="hru" pinned="false" current-in-tab="false">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -120,26 +120,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="odu" pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="idu" pinned="false" current-in-tab="false">
-        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="calorimeter" pinned="false" current-in-tab="false">
         <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="odu" pinned="false" current-in-tab="true">
+        <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -165,8 +156,9 @@
       <find>step</find>
       <find>/api/data_search_id</find>
       <find>conn_te</find>
-      <find>redu</find>
       <find>999.363437843884</find>
+      <find>redu</find>
+      <find>include</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,10 +194,10 @@
         <option value="$PROJECT_DIR$/models/calorimeter.model.js" />
         <option value="$PROJECT_DIR$/models/idu.model.js" />
         <option value="$PROJECT_DIR$/models/header.model.js" />
-        <option value="$PROJECT_DIR$/controller/lg/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89a2b770-66cc-4ece-a8ca-4e5c78def3ad/console_2.sql" />
         <option value="$PROJECT_DIR$/models/db.js" />
         <option value="$PROJECT_DIR$/controller/lg/admin.ctrl.js" />
+        <option value="$PROJECT_DIR$/controller/lg/index.js" />
         <option value="$PROJECT_DIR$/controller/lg/test.ctrl.js" />
       </list>
     </option>
@@ -266,11 +258,6 @@
               <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="lg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lgwork_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lgwork_backend" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -410,7 +397,7 @@
       <workItem from="1570623209826" duration="3274000" />
       <workItem from="1570637505647" duration="4254000" />
       <workItem from="1570965842389" duration="2116000" />
-      <workItem from="1571036055071" duration="5287000" />
+      <workItem from="1571036055071" duration="8673000" />
     </task>
     <task id="LOCAL-00001" summary="login api complete">
       <created>1565093259703</created>
@@ -423,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89155000" />
+    <option name="totallyTimeSpent" value="92541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -440,12 +427,12 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32968238" />
       <window_info id="npm" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49932885" visible="true" weight="0.28820962" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932885" visible="true" weight="0.41339156" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.2954876" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20738254" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20268457" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.20268457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -619,7 +606,6 @@
       </provider>
     </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu" />
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru" />
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -690,20 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/sidu_awhp">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -718,21 +690,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/controller/lg/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/idu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="1023" column="22" lean-forward="true" selection-start-line="1023" selection-start-column="22" selection-end-line="1023" selection-end-column="22" />
+          <folding>
+            <element signature="e#2588#2668#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/hru">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -746,14 +735,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/lg/test.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="e#1708#1720#0" />
-            <element signature="e#2588#2668#0" />
-          </folding>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/calorimeter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89a2b770-66cc-4ece-a8ca-4e5c78def3ad/schema/lg_work/table/odu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
